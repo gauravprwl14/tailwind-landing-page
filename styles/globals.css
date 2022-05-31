@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.v7_671 {
+    width: 100%;
+    max-height: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.title {
+    @apply text-eerieBlack text-3xl font-medium leading-tight font-Comfortaa mb-8;
+}
+
+.description {
+    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium px-20;
+}
+
+.section-container {
+    @apply flex flex-col w-full items-center justify-center pt-14;
+}
