@@ -40,3 +40,15 @@
 .bullet-point-text {
     @apply font-Poppins font-medium text-base text-left text-charcoal
 }
+
+.h1 {
+    @apply font-Comfortaa font-bold text-2xl
+}
+
+.designation-heading {
+    @apply font-Poppins font-medium text-base
+}
+
+.dotted-border {
+    border-image: url('/img/dotted_line.svg') 100% 1;
+}
