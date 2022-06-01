@@ -5,6 +5,7 @@ import Header from '../components/header'
 import JourneySection from '../components/Home/JourneySection'
 import CtaSection from '../components/Home/CtaSection'
 import ServiceSection from '../components/Home/ServiceSection'
+import Testimonial from '../components/Home/Testimonial'
 
 // .v7_671 {
 //   width: 100%;
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
         <JourneySection />
         <CtaSection />
         <ServiceSection />
+        <Testimonial />
 
         {/* <h1 className="text-6xl font-bold">
           Welcome to{' '}

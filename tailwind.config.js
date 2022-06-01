@@ -28,6 +28,7 @@ module.exports = {
                 // veryLightGray: 'hsl(0, 0%, 98%)',
 
                 eerieBlack: '#1C1C1C',
+                onyx: '#373737',
                 charcoal: '#3A475B',
                 veryLightGray: '#F0FDF4',
                 electricGreen: '#7EC636',
