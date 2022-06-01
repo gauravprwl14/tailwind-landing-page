@@ -26,5 +26,17 @@
 }
 
 .section-container {
-    @apply flex flex-col w-full items-center justify-center pt-14;
+    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl px-20;
+}
+
+.card-title {
+    @apply text-black font-Comfortaa font-bold text-2xl pb-4
+}
+
+.card-description {
+    @apply font-Poppins font-medium text-base text-charcoal mb-8
+}
+
+.bullet-point-text {
+    @apply font-Poppins font-medium text-base text-left text-charcoal
 }

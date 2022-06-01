@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
       </div>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+      <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
         <JourneySection />
         <CtaSection />
         <ServiceSection />
