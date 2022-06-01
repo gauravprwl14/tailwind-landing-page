@@ -51,4 +51,5 @@
 
 .dotted-border {
     border-image: url('/img/dotted_line.svg') 100% 1;
+    border-image-width: 10px;
 }

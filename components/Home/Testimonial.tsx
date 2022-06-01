@@ -22,7 +22,7 @@ const ProfileDetails = () => {
 
 const Testimonial = () => {
     return (
-        <div className='bg-onyx flex w-full items-center justify-center mt-16 border-t-2 custom-border'>
+        <div className='bg-onyx flex w-full items-center justify-center mt-16 border-t-2 dotted-border'>
             <div className='section-container pb-14 border-t'>
 
                 <div className='flex flex-row w-full'>

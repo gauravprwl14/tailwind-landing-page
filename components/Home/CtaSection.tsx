@@ -18,7 +18,7 @@ export const CtaSection = () => {
                         <Image src="/img/quotes.svg" alt="Quotes" width="100%" height="30%" />
                     </div>
                 </div>
-                <div><button className='mt-10 p-3 px-6 pt-2 border border-4 border-black bg-veryLightGray rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
+                <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
             </div>
         </div>
     )
