@@ -79,8 +79,8 @@ const Card = ({ cardObj }) => {
                 <div className='pb-4'>
                     {obj.mainFeatures.map((pointer, index) => {
                         return (
-                            <div key={index} className="flex flex-row items-flex-start py-2">
-                                <div className='pt-1' style={{ width: '30px' }}>
+                            <div key={index} className="pointer-container py-2">
+                                <div className='pointer-bullet-container'>
                                     <img className='max-w-none' src="img/bullet_point.svg" />
                                 </div>
                                 <div className='bullet-point-text pl-3 '>{pointer.text}</div>
@@ -98,14 +98,14 @@ const Card = ({ cardObj }) => {
 
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
 const CardContainer = () => {
     return (
         <div>
-            <div className='grid grid-cols-3 gap-4 relative'>
+            <div className='card-container'>
                 {
                     CardJSON.map((cardObject) => {
                         return (<Card cardObj={cardObject} />)

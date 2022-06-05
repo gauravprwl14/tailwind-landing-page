@@ -17,6 +17,10 @@
     z-index: -1;
 }
 
+.page-container {
+    @apply flex w-full flex-1 flex-col items-center justify-center text-center
+}
+
 .title {
     @apply text-eerieBlack text-3xl font-medium leading-tight font-Comfortaa mb-8;
 }
@@ -41,8 +45,20 @@
     @apply font-Poppins font-medium text-base text-left text-charcoal
 }
 
+.bullet-point-style-02-text {
+    @apply font-Comfortaa font-bold text-base text-left text-black
+}
+
+.bullet-point-style-02-description {
+    @apply font-Poppins font-semibold text-sm text-left text-charcoal
+}
+
 .h1 {
     @apply font-Comfortaa font-bold text-2xl
+}
+
+.service-title {
+    @apply font-Comfortaa font-bold text-4xl text-eerieBlack
 }
 
 .designation-heading {
@@ -50,6 +66,37 @@
 }
 
 .dotted-border {
-    border-image: url('/img/dotted_line.svg') 100% 1;
-    border-image-width: 10px;
+    border-image: url('/img/dotted_line.svg') 100% 6;
+}
+
+.text-medium {
+    @apply font-Poppins font-medium text-base text-charcoal;
+}
+
+.text-extra-bold {
+    @apply font-Poppins font-extrabold text-base text-charcoal;
+}
+
+.h-841 {
+    height: 841px;
+}
+
+.cta-description-title {
+    @apply font-Comfortaa font-medium text-3xl
+}
+
+.card-container {
+    @apply grid grid-cols-3 gap-4 relative;
+}
+
+.pointer-container {
+    @apply flex flex-row items-start;
+}
+
+.pointer-bullet-container {
+    @apply pt-1 w-8;
+}
+
+.max-w-48 {
+    max-width: 48px;
 }

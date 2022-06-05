@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import Header from '../components/header'
 import Footer from '../components/Footer'
 import JourneySection from '../components/Home/JourneySection'
@@ -22,6 +21,10 @@ import Testimonial from '../components/Home/Testimonial'
 //   z-index: -1;
 // }
 
+const title = 'We help companies build & launch digital transformations'
+const description = 'Cloud-native Software  •  Cloud Migration  •  Cloud Operations'
+
+
 
 const Home: NextPage = () => {
   return (
@@ -31,25 +34,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Header
+        title={title}
+        description={description}
+      />
 
 
-      <div className="flex flex-col w-full bg-no-repeat bg-center bg-cover bg-[url('/img/header_background_01.svg')] object-contain py-4">
 
-
-        <Header />
-
-
-        <section id="header-background" className='flex w-full flex-1 flex-col items-center justify-center px-20 text-center font-Comfortaa'>
-          <div className='flex flex-col space-y-4 text-white px-20 items-center justify-center'>
-            <div className='text-5xl tracking-tight font-thin leading-tight max-w-4xl'>We help companies build & launch digital transformations </div>
-            <div className='text-electricGreen text-4xl tracking-tight'>Cloud-native Software  •  Cloud Migration  •  Cloud Operations </div>
-          </div>
-
-        </section>
-
-      </div>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center text-center">
+      <main className="page-container">
         <JourneySection />
         <CtaSection />
         <ServiceSection />
