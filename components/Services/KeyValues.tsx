@@ -51,24 +51,28 @@ const BulletPoint = ({ pointers }) => {
 
 const KeyValues = () => {
     const obj = KeyValuesJson[0]
-    return <div className='section-container'>
-        <div className='text-left'>
-            <div className='h1 pb-3'> Our JUMP™ System </div>
-            <div className='bullet-point-text pt-3'> Built on decades of successfully launching digital transformations projects, we developed JUMP™, our exclusive process-based system for successfully building and launching digital transformations.
-                <br />
-                <br />
-                Each stage in the JUMP™ journey has a defined destination with a clear set of deliverables that provide immediate value.
+    return (
+        <div className='flex w-full dotted-border-green'>
+            <div className='section-container'>
+                <div className='text-left'>
+                    <div className='h1 pb-3'> Our JUMP™ System </div>
+                    <div className='bullet-point-text pt-3'> Built on decades of successfully launching digital transformations projects, we developed JUMP™, our exclusive process-based system for successfully building and launching digital transformations.
+                        <br />
+                        <br />
+                        Each stage in the JUMP™ journey has a defined destination with a clear set of deliverables that provide immediate value.
+                    </div>
+                </div>
+
+                <div className='flex flex-row flex-1 h-full mt-4'>
+                    <ImageContainer src={obj.image} />
+                    <div className='flex flex-col flex-1 text-left justify-center pl-4'>
+                        <BulletPoint pointers={obj.pointers} />
+                    </div>
+                </div>
+
             </div>
         </div>
-
-        <div className='flex flex-row flex-1 h-full mt-4'>
-            <ImageContainer src={obj.image} />
-            <div className='flex flex-col flex-1 text-left justify-center pl-4'>
-                <BulletPoint pointers={obj.pointers} />
-            </div>
-        </div>
-
-    </div>
+    )
 }
 
 export default KeyValues
