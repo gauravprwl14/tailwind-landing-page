@@ -84,6 +84,17 @@ const ServiceJSON = [
 ]
 
 
+const TestimonialJSON = {
+    userDetails: {
+        name: 'Charles Mon',
+        designation: 'Product Manager - RocketGate',
+        profilePic: '/img/profile_icon.svg'
+    },
+    testimonial: "I have worked with the BikeCloud team on a few projects in the past and their JUMP system and approach...is the best in the business."
+}
+
+
+
 const Services = () => {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center py-2">
@@ -98,7 +109,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <Testimonial />
+                <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
                 <KeyValues />
 
             </main>
