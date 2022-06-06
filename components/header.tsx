@@ -5,6 +5,8 @@ import { ROUTES } from '../utility/routes'
 type HeaderType = {
     title: string;
     description: string;
+    bgContainer: string;
+    headerContainer: string;
 }
 
 const Header = () => {
@@ -57,17 +59,14 @@ const Header = () => {
     )
 }
 
-export const HeaderContainer = ({ title, description }: HeaderType) => {
+export const HeaderContainer = ({ title, description, bgContainer, headerContainer }: HeaderType) => {
     return (
-        <div className="flex flex-col h-full w-full bg-no-repeat bg-center bg-cover bg-[url('/img/header_background_01.svg')] object-contain">
-
-
+        <div className={`flex flex-col h-full w-full bg-no-repeat bg-cover bg-[url('/img/header_background_01.svg')] object-contain ${bgContainer}`}>
             <Header />
 
-
-            <section id="header-background" className='flex w-full flex-1 flex-col items-center justify-center px-20 text-center font-Comfortaa'>
+            <section id="header-background" className={`flex w-full flex-1 flex-col items-center px-20 text-center font-Comfortaa ${headerContainer}`}>
                 <div className='flex flex-col space-y-4 text-white px-20 items-center justify-center'>
-                    <div className='text-4xl tracking-tight font-thin leading-tight max-w-4xl'>{title} </div>
+                    <div className='text-5xl tracking-tight font-thin leading-tight max-w-4xl'>{title} </div>
                     <div className='text-electricGreen text-3xl tracking-tight'>{description} </div>
                 </div>
 

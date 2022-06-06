@@ -43,11 +43,13 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="w-full" style={{ height: '32rem' }}>
+      <div className="w-full" style={{ height: '40rem' }}>
 
         <Header
           title={title}
           description={description}
+          bgContainer="bg-center"
+          headerContainer="mt-32 justify-center"
         />
       </div>
 

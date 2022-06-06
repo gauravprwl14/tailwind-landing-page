@@ -105,10 +105,15 @@ const Services = () => {
                 <title>Bike Cloud</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header
-                title={title}
-                description={description}
-            />
+            <div className="w-full" style={{ height: '28rem' }}>
+
+                <Header
+                    title={title}
+                    description={description}
+                    bgContainer="bg-bottom"
+                    headerContainer="mt-3"
+                />
+            </div>
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />

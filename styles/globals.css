@@ -118,3 +118,7 @@
 .cloud-operation-img-container img {
     height: auto !important;
 }
+
+header-container {
+    margin-top: 3rem;
+}
