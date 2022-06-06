@@ -54,7 +54,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className='section-container h-841'>
+                        <div className={`section-container h-841 ${serviceObj.classes}`}>
                             <div className='flex flex-row flex-1 h-full'>
 
                                 {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}

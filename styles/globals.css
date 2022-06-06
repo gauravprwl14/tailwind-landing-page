@@ -87,6 +87,10 @@
     height: 841px;
 }
 
+.h-741 {
+    height: 741px;
+}
+
 .cta-description-title {
     @apply font-Comfortaa font-medium text-3xl
 }
