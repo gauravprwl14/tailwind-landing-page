@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Footer = () => {
     return (
-        <footer className="flex h-56 w-full items-center justify-center bg-[url('/img/footer_bg.svg')]">
+        <footer className="flex h-56 w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover">
             <div className='grid grid-cols-3 h-full'>
                 <div className='col-start-2'>
                     <div className='flex flex-col justify-around h-full text-white'>
