@@ -7,11 +7,11 @@ import Button from '../button'
 
 
 
-const ImageContainer = ({ src }) => {
+const ImageContainer = ({ obj }) => {
     return (
         <div className='flex-1 pr-4'>
-            <div className={"w-full h-full relative items-center"}>
-                <img src={src} width={'100%'} style={{ height: 'inherit' }} />
+            <div className={`w-full h-full relative items-center ${obj.classes}`}>
+                <img src={obj.src} width={'100%'} className="h-inherit" />
             </div>
         </div>
     )
@@ -51,7 +51,7 @@ const ServiceDetails = ({ arr }) => {
                 <div className='section-container h-841'>
                     <div className='flex flex-row flex-1 h-full'>
 
-                        {serviceObj.imagePosition === 'left' && <ImageContainer src={serviceObj.image} />}
+                        {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
                         <div className='flex flex-col flex-1 text-left pl-4'>
                             <div className='service-title mb-5'>{serviceObj.title}</div>
                             <div className='text-medium' >{serviceObj.description}</div>
@@ -70,7 +70,7 @@ const ServiceDetails = ({ arr }) => {
 
                         </div>
 
-                        {serviceObj.imagePosition === 'right' && <ImageContainer src={serviceObj.image} />}
+                        {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} />}
 
                     </div>
 

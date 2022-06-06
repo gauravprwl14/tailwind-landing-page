@@ -100,3 +100,15 @@
 .max-w-48 {
     max-width: 48px;
 }
+
+.h-inherit {
+    height: inherit;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.cloud-operation-img-container img {
+    height: auto !important;
+}
