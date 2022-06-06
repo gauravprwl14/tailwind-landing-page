@@ -67,6 +67,12 @@
 
 .dotted-border {
     border-image: url('/img/dotted_line.svg') 100% 6;
+    border-bottom-width: 8px;
+}
+
+.dotted-border-green {
+    border-image: url('/img/dotted_line_green.svg') 100% 6;
+    border-bottom-width: 10px;
 }
 
 .text-medium {
@@ -99,4 +105,16 @@
 
 .max-w-48 {
     max-width: 48px;
+}
+
+.h-inherit {
+    height: inherit;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.cloud-operation-img-container img {
+    height: auto !important;
 }

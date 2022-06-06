@@ -24,6 +24,15 @@ import Testimonial from '../components/Home/Testimonial'
 const title = 'We help companies build & launch digital transformations'
 const description = 'Cloud-native Software  •  Cloud Migration  •  Cloud Operations'
 
+const TestimonialJSON = {
+  userDetails: {
+    name: 'Pierre Marcoux',
+    designation: 'CFO - Coast To Coast Helicopters',
+    profilePic: '/img/profile_icon.svg'
+  },
+  testimonial: "We were running our multi-million dollar company, with remote employees spread across multiple time zones, using manual paperwork. BikeCloud transformed our operations with a beautiful mobile and web solution that integrates with our accounting system."
+}
+
 
 
 const Home: NextPage = () => {
@@ -45,7 +54,7 @@ const Home: NextPage = () => {
         <JourneySection />
         <CtaSection />
         <ServiceSection />
-        <Testimonial />
+        <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
 
         {/* <h1 className="text-6xl font-bold">
           Welcome to{' '}

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Button from '../button'
-
+import { ServiceType, ServicePointersType, ServiceImageType } from '../../types/commonTypes'
 type ImageContainerPropTypes = {
     src: string
 }
@@ -9,18 +9,19 @@ type ImageContainerPropTypes = {
 
 
 
-const ImageContainer = ({ src }: ImageContainerPropTypes) => {
+
+const ImageContainer = ({ obj }: { obj: ServiceImageType }) => {
     return (
         <div className='flex-1 pr-4'>
-            <div className={"w-full h-full relative items-center"}>
-                <img src={src} width={'100%'} style={{ height: 'inherit' }} />
+            <div className={`w-full h-full relative items-center ${obj.classes}`}>
+                <img src={obj.src} width={'100%'} className="h-inherit" />
             </div>
         </div>
     )
 }
 
 
-const BulletList = ({ lists }) => {
+const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     return (
         <div className='flex my-4'>
             <ul className='text-left '>
@@ -43,7 +44,7 @@ const BulletList = ({ lists }) => {
 }
 
 
-const ServiceDetails = ({ arr }) => {
+const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
     return (
@@ -53,7 +54,7 @@ const ServiceDetails = ({ arr }) => {
                 <div className='section-container h-841'>
                     <div className='flex flex-row flex-1 h-full'>
 
-                        {serviceObj.imagePosition === 'left' && <ImageContainer src={serviceObj.image} />}
+                        {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
                         <div className='flex flex-col flex-1 text-left pl-4'>
                             <div className='service-title mb-5'>{serviceObj.title}</div>
                             <div className='text-medium' >{serviceObj.description}</div>
@@ -72,7 +73,7 @@ const ServiceDetails = ({ arr }) => {
 
                         </div>
 
-                        {serviceObj.imagePosition === 'right' && <ImageContainer src={serviceObj.image} />}
+                        {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} />}
 
                     </div>
 

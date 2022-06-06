@@ -15,8 +15,11 @@ const description = 'Whether you need to build cloud-native software or migrate 
 
 const ServiceJSON = [
     {
-        image: '/img/cloud_native_service.svg',
-        imagePosition: 'left',
+        image: {
+            src: '/img/cloud_native_service.svg',
+            position: 'left',
+            classes: 'items-center'
+        },
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges',
         ctaDescription: 'Let’s work together on your next software project',
@@ -37,8 +40,11 @@ const ServiceJSON = [
     },
 
     {
-        image: '/img/cloud_migration.svg',
-        imagePosition: 'right',
+        image: {
+            src: '/img/cloud_migration.svg',
+            position: 'right',
+            classes: 'items-center'
+        },
         title: 'Cloud Migration',
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         ctaDescription: 'Let’s work together on your cloud migration',
@@ -59,8 +65,11 @@ const ServiceJSON = [
     },
 
     {
-        image: '/img/cloud_operation.svg',
-        imagePosition: 'left',
+        image: {
+            src: '/img/cloud_operation.svg',
+            position: 'left',
+            classes: 'items-baseline cloud-operation-img-container'
+        },
         title: 'Cloud Operations',
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         ctaDescription: 'Let’s work together on your next software project',
@@ -78,6 +87,17 @@ const ServiceJSON = [
 ]
 
 
+const TestimonialJSON = {
+    userDetails: {
+        name: 'Charles Mon',
+        designation: 'Product Manager - RocketGate',
+        profilePic: '/img/profile_icon.svg'
+    },
+    testimonial: "I have worked with the BikeCloud team on a few projects in the past and their JUMP system and approach...is the best in the business."
+}
+
+
+
 const Services = () => {
     return (
         <div className="flex min-h-screen flex-col items-center justify-center py-2">
@@ -92,7 +112,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <Testimonial />
+                <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
                 <KeyValues />
 
             </main>
