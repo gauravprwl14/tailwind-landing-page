@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           title={title}
           description={description}
           bgContainer="bg-center"
-          headerContainer="mt-32 justify-center"
+          headerContainer="justify-center"
         />
       </div>
 
