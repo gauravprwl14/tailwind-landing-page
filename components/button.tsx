@@ -1,6 +1,7 @@
 import React from 'react'
+import { ButtonPropTypes } from '../types/commonTypes'
 
-const Button = ({ text }) => {
+const Button = ({ text }: ButtonPropTypes) => {
     return (
         <div className=''>
             <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>

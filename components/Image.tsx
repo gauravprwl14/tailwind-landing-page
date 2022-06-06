@@ -1,7 +1,7 @@
 import React from 'react'
+import { ImageContainerType } from '../types/commonTypes'
 
-
-const ImageContainer = ({ src }) => {
+const ImageContainer = ({ src }: ImageContainerType) => {
     return (
         <div className='flex-1 pr-4'>
             <div className={"w-full h-full relative items-center"}>
@@ -10,6 +10,7 @@ const ImageContainer = ({ src }) => {
         </div>
     )
 }
+
 
 
 export default ImageContainer

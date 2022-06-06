@@ -2,12 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 import Button from '../button'
 
+type ImageContainerPropTypes = {
+    src: string
+}
 
 
 
 
-
-const ImageContainer = ({ src }) => {
+const ImageContainer = ({ src }: ImageContainerPropTypes) => {
     return (
         <div className='flex-1 pr-4'>
             <div className={"w-full h-full relative items-center"}>

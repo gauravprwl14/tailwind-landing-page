@@ -1,5 +1,11 @@
 import React from 'react'
 import ImageContainer from '../Image'
+import { PointerType } from '../../types/commonTypes'
+
+type BulletPointPropTypes = {
+    pointers: PointerType[]
+}
+
 
 const KeyValuesJson = [
     {
@@ -26,7 +32,7 @@ const KeyValuesJson = [
 
 
 
-const BulletPoint = ({ pointers }) => {
+const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
 
 
     return <div>

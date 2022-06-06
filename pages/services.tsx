@@ -6,6 +6,9 @@ import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
 import Footer from '../components/Footer'
 
+
+
+
 const title = 'Personalized digital transformations'
 const description = 'Whether you need to build cloud-native software or migrate existing legacy systems to the cloud, we take your project from idea to launch.'
 

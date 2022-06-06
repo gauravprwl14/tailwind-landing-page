@@ -1,5 +1,15 @@
 import React from 'react'
 
+type MainFeaturesType = {
+    text: string
+}
+
+type CardType = {
+    title: string;
+    description: string;
+    mainFeatures: MainFeaturesType[]
+}
+
 
 const CardJSON = [
     {
@@ -49,7 +59,7 @@ const CardJSON = [
     }
 ]
 
-const Card = ({ cardObj }) => {
+const Card = ({ cardObj }: { cardObj: CardType }) => {
     const obj = cardObj
     return (
         <div className='flex flex-col items-center relative overflow-hidden'>
