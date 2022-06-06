@@ -48,39 +48,45 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
     return (
+        <>
+            {
 
-        arr.map((serviceObj, index) => {
-            return (<>
-                <div className='section-container h-841'>
-                    <div className='flex flex-row flex-1 h-full'>
 
-                        {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
-                        <div className='flex flex-col flex-1 text-left pl-4'>
-                            <div className='service-title mb-5'>{serviceObj.title}</div>
-                            <div className='text-medium' >{serviceObj.description}</div>
-                            <BulletList lists={serviceObj.pointers} />
-                            <div className='flex flex-col justify-center items-center'>
-                                <div className='cta-description-title text-center my-4 pb-2'>
-                                    {serviceObj.ctaDescription}
+                arr.map((serviceObj, index) => {
+                    return (
+                        <div className='section-container h-841'>
+                            <div className='flex flex-row flex-1 h-full'>
+
+                                {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
+                                <div className='flex flex-col flex-1 text-left pl-4'>
+                                    <div className='service-title mb-5'>{serviceObj.title}</div>
+                                    <div className='text-medium' >{serviceObj.description}</div>
+                                    <BulletList lists={serviceObj.pointers} />
+                                    <div className='flex flex-col justify-center items-center'>
+                                        <div className='cta-description-title text-center my-4 pb-2'>
+                                            {serviceObj.ctaDescription}
+
+                                        </div>
+
+
+
+                                        <Button text="Get in touch" />
+
+                                    </div>
 
                                 </div>
 
-
-
-                                <Button text="Get in touch" />
+                                {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} />}
 
                             </div>
 
                         </div>
+                    )
+                })
 
-                        {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} />}
+            }
+        </>
 
-                    </div>
-
-                </div >
-            </>
-            )
-        })
 
 
     )

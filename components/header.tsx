@@ -2,6 +2,11 @@ import React from 'react'
 import Link from 'next/link'
 import { ROUTES } from '../utility/routes'
 
+type HeaderType = {
+    title: string;
+    description: string;
+}
+
 const Header = () => {
     return (
         // <!-- Navbar -- >
@@ -52,9 +57,9 @@ const Header = () => {
     )
 }
 
-export const HeaderContainer = ({ title, description }) => {
+export const HeaderContainer = ({ title, description }: HeaderType) => {
     return (
-        <div className="flex flex-col w-full bg-no-repeat bg-center bg-cover bg-[url('/img/header_background_01.svg')] object-contain py-4">
+        <div className="flex flex-col h-full w-full bg-no-repeat bg-center bg-cover bg-[url('/img/header_background_01.svg')] object-contain">
 
 
             <Header />
