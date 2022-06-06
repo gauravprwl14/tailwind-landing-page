@@ -58,7 +58,7 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
 const KeyValues = () => {
     const obj = KeyValuesJson[0]
     return (
-        <div className='flex w-full dotted-border-green'>
+        <div className='flex w-full dotted-border-green items-center justify-center'>
             <div className='section-container'>
                 <div className='text-left'>
                     <div className='h1 pb-3'> Our JUMP™ System </div>
