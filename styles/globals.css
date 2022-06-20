@@ -26,11 +26,11 @@
 }
 
 .description {
-    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium px-20;
+    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium sm:px-20 px-4;
 }
 
 .section-container {
-    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl px-20;
+    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl sm:px-20 px-4;
 }
 
 .card-title {
