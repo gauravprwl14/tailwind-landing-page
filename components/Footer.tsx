@@ -33,14 +33,14 @@ const Footer = () => {
     return (
         <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover">
             <div className=''>
-                <div className='grid sm:grid-cols-3 gap-8 pt-8 md:pt-12 auto-rows-fr'>
-                    <div className='flex flex-col justify-around text-white sm:col-span-2'>
+                <div className='grid md:grid-cols-3 gap-8 pt-8 md:pt-12 auto-rows-fr'>
+                    <div className='flex flex-col justify-around text-white md:col-span-2'>
                         <NavigationLinks />
                     </div>
-                    <div className='flex flex-col justify-center text-white sm:col-span-1 sm:row-span-2 '>
+                    <div className='flex flex-col justify-center text-white md:col-span-1 md:row-span-2 '>
                         <ActionButton />
                     </div>
-                    <div className='flex flex-col justify-around text-white sm:col-span-2'>
+                    <div className='flex flex-col justify-around text-white md:col-span-2'>
                         <CopyRightText />
                     </div>
                 </div>
