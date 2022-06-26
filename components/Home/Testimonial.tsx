@@ -39,12 +39,12 @@ const Testimonial = ({ userDetails, userTestimonial }: TestimonialPropType) => {
                             <ProfileDetails name={userDetails.name} designation={userDetails.designation} />
                         </div>
                     </div>
-                    <div className='flex-1 items-center justify-center'>
+                    <div className='flex-1 items-center justify-center mt-6 md:mt-0'>
                         <div className='relative'>
-                            <div className="absolute -left-20 w-12 ">
+                            {/* <div className="absolute -left-20 w-12 ">
                                 <Image src="/img/testimonial_quote.svg" alt="testimonial_quote" width="100%" height="30%" />
-                            </div>
-                            <div className='h1 text-white text-left quote-right'>{userTestimonial}</div>
+                            </div> */}
+                            <div className='quote-left h1 text-white text-left quote-right'>{userTestimonial}</div>
                             {/* <div className="absolute -right-10 w-12 ">
                                 <Image src="/img/testimonial_quote.svg" alt="testimonial_quote" width="100%" height="30%" />
                             </div> */}

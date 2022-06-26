@@ -26,11 +26,11 @@
 }
 
 .description {
-    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium md: px-20 px-4;
+    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium md:px-20 px-4;
 }
 
 .section-container {
-    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl md: px-20 px-4;
+    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl md:px-20 px-4;
 }
 
 .card-title {
@@ -125,4 +125,18 @@
 
 .header-container {
     margin-top: 3rem;
+}
+
+/* .quote-right {
+    @apply after:absolute after:w-16 after:h-16 after:content-['hello'] after:bg-[url("/img/testimonial_quote.svg")];
+} */
+
+
+.quote-left {
+    @apply before:absolute before:w-12 before:h-4 before:content-[""] before:bg-[url("/img/testimonial_quote.svg")] before:bg-no-repeat md:before:-left-20 before:-top-7 
+}
+
+
+.quote-right {
+    @apply after:absolute after:w-12 after:h-4 after:content-[""] after:bg-[url("/img/testimonial_quote.svg")] after:bg-no-repeat md:after:-right-16 after:-bottom-6
 }
