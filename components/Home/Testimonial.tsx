@@ -32,8 +32,8 @@ const Testimonial = ({ userDetails, userTestimonial }: TestimonialPropType) => {
         <div className='bg-onyx flex w-full items-center justify-center mt-16 dotted-border'>
             <div className='section-container pb-14'>
 
-                <div className='flex flex-row w-full'>
-                    <div className='flex flex-1 items-center justify-center'>
+                <div className='flex flex-col md:flex-row w-full'>
+                    <div className='flex flex-1 items-center justify-center my-2'>
                         <div className='flex flex-row items-center justify-center'>
                             <ProfileIcon src={userDetails.profilePic} />
                             <ProfileDetails name={userDetails.name} designation={userDetails.designation} />
@@ -51,16 +51,6 @@ const Testimonial = ({ userDetails, userTestimonial }: TestimonialPropType) => {
                         </div>
                     </div>
                 </div>
-                {/* <div className='relative'>
-                    <div className="absolute -left-32 ">
-                        <Image src="/img/quotes.svg" alt="Quotes" width="100%" height="30%" />
-                    </div>
-                    <div className='text-white font-GloriaHallelujah text-4xl'>Let’s chat about your next project </div>
-                    <div className="absolute -right-32 ">
-                        <Image src="/img/quotes.svg" alt="Quotes" width="100%" height="30%" />
-                    </div>
-                </div>
-                <div><button className='mt-10 p-3 px-6 pt-2 border border-4 border-black bg-veryLightGray rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div> */}
             </div>
         </div>
     )
