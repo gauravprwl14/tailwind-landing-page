@@ -44,7 +44,7 @@ const Testimonial = ({ userDetails, userTestimonial }: TestimonialPropType) => {
                             {/* <div className="absolute -left-20 w-12 ">
                                 <Image src="/img/testimonial_quote.svg" alt="testimonial_quote" width="100%" height="30%" />
                             </div> */}
-                            <div className='quote-left h1 text-white text-left quote-right'>{userTestimonial}</div>
+                            <div className='quote-left h1 text-white text-left quote-right px-2 md:px-0'>{userTestimonial}</div>
                             {/* <div className="absolute -right-10 w-12 ">
                                 <Image src="/img/testimonial_quote.svg" alt="testimonial_quote" width="100%" height="30%" />
                             </div> */}

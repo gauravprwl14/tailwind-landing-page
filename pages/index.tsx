@@ -55,7 +55,7 @@ const Home: NextPage = () => {
 
 
 
-      <main className="page-container">
+      <main className="page-container" >
         <JourneySection />
         <CtaSection />
         <ServiceSection />
