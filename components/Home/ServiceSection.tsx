@@ -62,23 +62,23 @@ const CardJSON = [
 const Card = ({ cardObj }: { cardObj: CardType }) => {
     const obj = cardObj
     return (
-        <div className='flex flex-col items-center relative overflow-hidden'>
+        <div className='flex flex-col items-center relative overflow-hidden  mt-4 lg:mt-0 flex-1 mx-3'>
             <div className=''>
-                <div className='absolute top-0 left-2 right-0'>
+                <div className='absolute top-0 left-2 right-0 mx-2 '>
                     <img src="img/top_horizontal_line.svg" />
                 </div>
                 <div className='absolute -bottom-0 left-3 right-3'>
                     <img src="img/bottom_horizontal_line.svg" />
                 </div>
-                <div className='absolute left-0 top-0 '>
+                <div className='absolute left-0 top-1 '>
                     <img src="img/left_vertical_line.svg" />
                 </div>
-                <div className='absolute right-0 top-0 left-auto'>
+                <div className='absolute right-0 top-1 left-auto'>
                     <img src="img/right_vertical_line.svg" />
                 </div>
             </div>
 
-            <div className='py-8 px-5 '>
+            <div className='py-8 px-5 flex flex-col flex-1'>
 
                 <div className='card-title'>
                     {obj.title}
@@ -99,7 +99,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                         )
                     })}
                 </div>
-                <div className=''>
+                <div className='flex flex-row justify-center flex-1 items-end'>
                     <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
                         <div className='flex flex-row '>
                             Learn more <img className='ml-2' src="img/right_arrow.svg" />
@@ -115,7 +115,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
 const CardContainer = () => {
     return (
         <div>
-            <div className='card-container'>
+            <div className='flex flex-col lg:flex-row'>
                 {
                     CardJSON.map((cardObject) => {
                         return (<Card cardObj={cardObject} />)
