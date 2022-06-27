@@ -164,6 +164,11 @@
     .h-128 {
         height: 28rem;;
     }
+
+    .text-extra-large {
+        font-size: 3rem;
+        line-height: 3.5rem
+    }
     
   }
 
