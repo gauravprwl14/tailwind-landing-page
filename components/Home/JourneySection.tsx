@@ -2,7 +2,7 @@ import React from 'react'
 
 export const JourneySection = () => {
     return (
-        <div className='section-container'>
+        <div className='section-container pb-16'>
             <div className='title'>
                 A digital transformation journey that
                 <div>delivers results</div>
@@ -18,7 +18,7 @@ export const JourneySection = () => {
 
             <div className='text-charcoal italic font-Poppins '>
                 Each stage of the JUMP™ journey has a destination with a clear set of deliverables that provide immediate
-                <div>value</div>
+                value
             </div>
         </div>
     )

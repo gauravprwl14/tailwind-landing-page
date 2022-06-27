@@ -61,11 +61,11 @@ const Header = () => {
 
 export const HeaderContainer = ({ title, description, bgContainer, headerContainer }: HeaderType) => {
     return (
-        <div className={`flex flex-col h-full w-full md:pb-8  bg-no-repeat bg-cover bg-[url('/img/header_background_01.svg')] object-contain ${bgContainer}`}>
+        <div className={`flex flex-col h-full w-full md:pb-8 max-w-screen-xl bg-no-repeat bg-cover bg-[url('/img/header_background_01.svg')] object-contain ${bgContainer}`}>
             <Header />
 
             <section id="header-background" className={`flex w-full flex-1 flex-col items-center  px-4 text-center font-Comfortaa ${headerContainer}`}>
-                <div className='flex flex-col max-w-screen-xl  space-y-4 text-white  items-center justify-center'>
+                <div className='flex flex-col  space-y-4 text-white  items-center justify-center'>
                     <div className='text-3xl  lg:text-extra-large tracking-tight font-thin leading-tight max-w-4xl'>{title} </div>
                     <div className='text-xl md:text-2xl lg:text-3xl text-electricGreen  tracking-tight'>{description} </div>
                 </div>
