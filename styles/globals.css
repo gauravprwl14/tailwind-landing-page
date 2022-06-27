@@ -22,15 +22,15 @@
 }
 
 .title {
-    @apply text-eerieBlack text-3xl font-medium leading-tight font-Comfortaa mb-8;
+    @apply text-eerieBlack text-3xl font-medium leading-tight font-Comfortaa ;
 }
 
 .description {
-    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium md:px-20 px-4;
+    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium md:px-20 px-4 py-8;
 }
 
 .section-container {
-    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl md:px-20 px-4;
+    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl md:px-20 px-4 py-8;
 }
 
 .card-title {
