@@ -69,8 +69,12 @@ const KeyValues = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row flex-1 h-full mt-4'>
-                    <ImageContainer src={obj.image} />
+                <div className='flex flex-col lg:flex-row flex-1 h-full mt-4'>
+                    <div className="flex justify-center">
+                        <div className="w-1/2 lg:w-full">
+                            <ImageContainer src={obj.image} />
+                        </div>
+                    </div>
                     <div className='flex flex-col flex-1 text-left justify-center pl-4'>
                         <BulletPoint pointers={obj.pointers} />
                     </div>

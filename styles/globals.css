@@ -83,13 +83,7 @@
     @apply font-Poppins font-extrabold text-base text-charcoal;
 }
 
-.h-841 {
-    height: 841px;
-}
 
-.h-741 {
-    height: 741px;
-}
 
 .cta-description-title {
     @apply font-Comfortaa font-medium text-3xl
@@ -168,6 +162,14 @@
     .text-extra-large {
         font-size: 3rem;
         line-height: 3.5rem
+    }
+
+    .h-841 {
+        height: 841px;
+    }
+    
+    .h-741 {
+        height: 741px;
     }
     
   }

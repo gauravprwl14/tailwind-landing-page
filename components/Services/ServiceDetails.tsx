@@ -12,7 +12,7 @@ type ImageContainerPropTypes = {
 
 const ImageContainer = ({ obj }: { obj: ServiceImageType }) => {
     return (
-        <div className='flex flex-1 md:pr-4 '>
+        <div className='flex flex-1 md:pr-4 mb-4 md:mb-0'>
             <div className={`w-full h-full flex items-center justify-center ${obj.classes}`}>
                 {/* <img src={obj.src} width={'80%'} className="h-inherit" /> */}
                 <img src={obj.src} className="lg:w-456 w-320" />
