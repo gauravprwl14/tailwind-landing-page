@@ -106,7 +106,7 @@ const Services = () => {
                 <title>Bike Cloud</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="w-full" style={{ height: '28rem' }}>
+            <div className="w-full h-full sm:h-80  lg:h-96" >
 
                 <Header
                     title={title}
