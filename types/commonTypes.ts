@@ -44,4 +44,5 @@ export type ServiceType = {
     description: string;
     ctaDescription: string;
     pointers: ServicePointersType[]
+    classes: string;
 }

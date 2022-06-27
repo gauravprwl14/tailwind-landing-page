@@ -71,7 +71,7 @@ const ServiceJSON = [
             classes: 'items-baseline cloud-operation-img-container'
         },
         title: 'Cloud Operations',
-        classes: "h-741",
+        classes: "h-full lg:h-741",
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         ctaDescription: 'Let’s work together on your next software project',
         pointers: [
@@ -106,7 +106,7 @@ const Services = () => {
                 <title>Bike Cloud</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="w-full" style={{ height: '28rem' }}>
+            <div className="w-full h-full sm:h-80  lg:h-96" >
 
                 <Header
                     title={title}

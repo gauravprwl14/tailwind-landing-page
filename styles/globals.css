@@ -26,11 +26,11 @@
 }
 
 .description {
-    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium px-20;
+    @apply max-w-5xl text-lg text-charcoal font-Poppins font-medium md:px-20 px-4;
 }
 
 .section-container {
-    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl px-20;
+    @apply flex flex-col w-full items-center justify-center pt-14 max-w-screen-xl md:px-20 px-4;
 }
 
 .card-title {
@@ -83,13 +83,7 @@
     @apply font-Poppins font-extrabold text-base text-charcoal;
 }
 
-.h-841 {
-    height: 841px;
-}
 
-.h-741 {
-    height: 741px;
-}
 
 .cta-description-title {
     @apply font-Comfortaa font-medium text-3xl
@@ -123,6 +117,63 @@
     height: auto !important;
 }
 
-header-container {
+.header-container {
     margin-top: 3rem;
+}
+
+/* .quote-right {
+    @apply after:absolute after:w-16 after:h-16 after:content-['hello'] after:bg-[url("/img/testimonial_quote.svg")];
+} */
+
+
+.quote-left {
+    @apply before:absolute before:w-12 before:h-4 before:content-[""] before:bg-[url("/img/testimonial_quote.svg")] before:bg-no-repeat md:before:-left-20 before:-top-7 before:left-0
+}
+
+
+.quote-right {
+    @apply after:absolute after:w-12 after:h-4 after:content-[""] after:bg-[url("/img/testimonial_quote.svg")] after:bg-no-repeat md:after:-right-16 after:-bottom-6 after:right-0
+}
+
+
+
+.cta-quote-left {
+    @apply before:absolute before:w-28 before:h-8 before:content-[""] before:bg-[url("/img/quotes.svg")] before:bg-no-repeat md:before:-left-28 md:before:-top-7 before:-top-10 before:left-0
+}
+
+
+.cta-quote-right {
+    @apply after:absolute after:w-24  md:after:w-28 after:h-8 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:-right-32 md:after:-bottom-6 after:-right-4 after:-bottom-10
+}
+
+@responsive {
+    .w-456 {
+        width: 456px;
+    }
+
+    .w-320 {
+        width: 320px;
+    }
+
+    .h-128 {
+        height: 28rem;;
+    }
+
+    .text-extra-large {
+        font-size: 3rem;
+        line-height: 3.5rem
+    }
+
+    .h-841 {
+        height: 841px;
+    }
+    
+    .h-741 {
+        height: 741px;
+    }
+    
+  }
+
+.header-content-wrapper {
+    @apply flex flex-col w-full items-center justify-center max-w-screen-xl md:px-20 mx-auto;
 }

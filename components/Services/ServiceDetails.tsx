@@ -12,9 +12,10 @@ type ImageContainerPropTypes = {
 
 const ImageContainer = ({ obj }: { obj: ServiceImageType }) => {
     return (
-        <div className='flex-1 pr-4'>
-            <div className={`w-full h-full relative items-center ${obj.classes}`}>
-                <img src={obj.src} width={'100%'} className="h-inherit" />
+        <div className='flex flex-1 md:pr-4 mb-4 md:mb-0'>
+            <div className={`w-full h-full flex items-center justify-center ${obj.classes}`}>
+                {/* <img src={obj.src} width={'80%'} className="h-inherit" /> */}
+                <img src={obj.src} className="lg:w-456 w-320" />
             </div>
         </div>
     )
@@ -54,8 +55,8 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className={`section-container h-841 ${serviceObj.classes}`}>
-                            <div className='flex flex-row flex-1 h-full'>
+                        <div className={`section-container ${serviceObj.classes}`}>
+                            <div className='flex flex-col lg:flex-row flex-1 h-full'>
 
                                 {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
                                 <div className='flex flex-col flex-1 text-left pl-4'>
