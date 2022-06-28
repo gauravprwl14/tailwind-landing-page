@@ -40,7 +40,7 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
             pointers.map((pointer, index) => {
                 return (
                     <div key={index} className="pointer-container py-2">
-                        <div className='pointer-bullet-container'>
+                        <div className='bullet-image-container-wider'>
                             <img className='max-w-48 w-full' src="img/bullet_point.svg" />
                         </div>
                         <div>

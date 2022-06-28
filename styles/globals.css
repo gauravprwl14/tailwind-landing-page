@@ -75,6 +75,10 @@
     border-top-width: 10px;
 }
 
+.text-light {
+    @apply font-Poppins font-light text-base text-charcoal;
+}
+
 .text-medium {
     @apply font-Poppins font-medium text-base text-charcoal;
 }
@@ -97,9 +101,14 @@
     @apply flex flex-row items-start;
 }
 
-.pointer-bullet-container {
+.bullet-image-container-wider {
     @apply pt-1 w-32;
 }
+.bullet-image-container-narrow {
+    @apply pt-1 w-8;
+}
+
+
 
 .max-w-48 {
     max-width: 48px;

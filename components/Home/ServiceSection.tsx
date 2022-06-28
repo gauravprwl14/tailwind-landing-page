@@ -90,7 +90,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                     {obj.mainFeatures.map((pointer, index) => {
                         return (
                             <div key={index} className="pointer-container py-2">
-                                <div className='pointer-bullet-container'>
+                                <div className='bullet-image-container-narrow'>
                                     <img className='max-w-none' src="img/bullet_point.svg" />
                                 </div>
                                 <div className='bullet-point-text pl-3 '>{pointer.text}</div>

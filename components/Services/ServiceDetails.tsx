@@ -32,7 +32,7 @@ const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
                         return (
                             <li key={index} className="list-disc mt-5">
                                 <div className='text-extra-bold'>{list.title}</div>
-                                <div className='mt-5 text-medium'>
+                                <div className='mt-2 text-medium'>
                                     {list.description}
                                 </div>
                             </li>
