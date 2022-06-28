@@ -29,17 +29,17 @@ const CardJSON = [
 
     },
     {
-        title: 'Cloud-Native Software',
-        description: 'Build beautiful software that perfectly solves your business challenges.',
+        title: 'Cloud Migration',
+        description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         mainFeatures: [
             {
-                text: 'Beautiful cloud-native applications for mobile, web, and desktop.'
+                text: 'Migrate legacy systems, as-is, to the clouds..'
             },
             {
-                text: 'Rebuild legacy applications to be cloud-native.'
+                text: 'Rebuild existing systems using cloud-native architecture & standards.'
             },
             {
-                text: 'Enterprise-level backend software for cloud-native services. '
+                text: 'Move stand-alone workloads to the cloud.'
             },
         ]
 
