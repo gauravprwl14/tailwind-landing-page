@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         <JourneySection />
         <CtaSection />
         <ServiceSection />
-        <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
+        {/* <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} /> */}
 
         {/* <h1 className="text-6xl font-bold">
           Welcome to{' '}
