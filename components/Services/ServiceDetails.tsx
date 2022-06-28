@@ -13,9 +13,10 @@ type ImageContainerPropTypes = {
 const ImageContainer = ({ obj }: { obj: ServiceImageType }) => {
     return (
         <div className='flex flex-1 md:pr-4 mb-4 md:mb-0'>
-            <div className={`w-full h-full flex items-center justify-center ${obj.classes}`}>
+            <div className={`w-full h-full flex items-center justify-center ${obj.classes} bg-contain bg-center bg-no-repeat ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
                 {/* <img src={obj.src} width={'80%'} className="h-inherit" /> */}
-                <img src={obj.src} className="lg:w-456 w-320" />
+                {/* <img src={obj.src} className="lg:w-456 w-320" /> */}
+                {/* <img src={obj.src} className="w-2/3" /> */}
             </div>
         </div>
     )
@@ -44,6 +45,17 @@ const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     )
 }
 
+const WorkTogetherSection = ({ description }: { description: String }) => {
+    return (
+        <div className='flex flex-col justify-center items-center'>
+            <div className='cta-description-title text-center my-4 pb-2'>
+                {description}
+            </div>
+            <Button text="Get in touch" />
+        </div>
+    )
+}
+
 
 const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
@@ -63,22 +75,13 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                     <div className='service-title mb-5'>{serviceObj.title}</div>
                                     <div className='text-medium' >{serviceObj.description}</div>
                                     <BulletList lists={serviceObj.pointers} />
-                                    <div className='flex flex-col justify-center items-center'>
-                                        <div className='cta-description-title text-center my-4 pb-2'>
-                                            {serviceObj.ctaDescription}
-
-                                        </div>
-
-
-
-                                        <Button text="Get in touch" />
-
-                                    </div>
-
                                 </div>
-
                                 {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} />}
 
+                            </div>
+
+                            <div>
+                                WorkTogetherSection
                             </div>
 
                         </div>
