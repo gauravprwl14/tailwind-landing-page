@@ -4,6 +4,7 @@ import Head from 'next/head'
 import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
+import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
 
 
@@ -68,10 +69,10 @@ const ServiceJSON = [
         image: {
             src: '/img/cloud_operation.svg',
             position: 'left',
-            classes: 'items-baseline cloud-operation-img-container'
+            classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto lg:-mt-16'
         },
         title: 'Cloud Operations',
-        classes: "h-full lg:h-741",
+        classes: "",
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         ctaDescription: 'Let’s work together on your next software project',
         pointers: [
@@ -118,7 +119,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
+                <CtaSection />
                 <KeyValues />
 
             </main>
