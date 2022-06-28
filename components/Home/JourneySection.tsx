@@ -2,7 +2,7 @@ import React from 'react'
 
 export const JourneySection = () => {
     return (
-        <div className='section-container pb-16'>
+        <div className='section-container !pb-16'>
             <div className='title'>
                 A digital transformation journey that
                 <div>delivers results</div>
