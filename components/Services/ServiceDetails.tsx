@@ -57,6 +57,17 @@ const WorkTogetherSection = ({ description }: { description: String }) => {
 }
 
 
+
+
+const alignSection = (position: string) => {
+    if (position === 'left') {
+        return 'justify-end'
+    }
+    if (position === 'right') {
+        return 'justify-start'
+    }
+}
+
 const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
@@ -80,8 +91,10 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                             </div>
 
-                            <div>
-                                WorkTogetherSection
+                            <div className={`flex w-full  ${alignSection(serviceObj.image.position)}`}>
+                                <div className="lg:basis-1/2">
+                                    <WorkTogetherSection description={serviceObj.ctaDescription} />
+                                </div>
                             </div>
 
                         </div>

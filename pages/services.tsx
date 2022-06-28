@@ -4,6 +4,7 @@ import Head from 'next/head'
 import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
+import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
 
 
@@ -118,7 +119,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
+                <CtaSection />
                 <KeyValues />
 
             </main>
