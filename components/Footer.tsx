@@ -31,7 +31,7 @@ const CopyRightText = () => {
 
 const Footer = () => {
     return (
-        <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover dotted-border-green">
+        <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-[#303030] bg-no-repeat bg-cover dotted-border-green">
             <div className='flex-1 flex-col py-6 lg:py-12'>
                 {/* <div className='grid md:grid-cols-3 gap-8 pt-8 md:pt-12 auto-rows-fr'>
                     <div className='flex flex-col justify-around text-white md:col-span-2'>
@@ -76,7 +76,7 @@ const Footer = () => {
 
 const FooterV2 = () => {
     return (
-        <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover dotted-border-green">
+        <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')]  bg-no-repeat bg-cover dotted-border-green">
             <div className=''>
                 <div className='grid md:grid-cols-3 gap-8 pt-8 md:pt-12 auto-rows-fr'>
                     <div className='flex flex-col justify-around text-white md:col-span-2'>
