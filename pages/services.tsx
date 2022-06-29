@@ -21,6 +21,7 @@ const ServiceJSON = [
             position: 'left',
             classes: 'items-center'
         },
+        id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges',
         ctaDescription: 'Let’s work together on your next software project',
@@ -46,6 +47,7 @@ const ServiceJSON = [
             position: 'right',
             classes: 'items-center'
         },
+        id: 'Cloud-Migration',
         title: 'Cloud Migration',
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         ctaDescription: 'Let’s work together on your cloud migration',
@@ -71,6 +73,7 @@ const ServiceJSON = [
             position: 'left',
             classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto lg:-mt-16'
         },
+        id: 'Cloud-Operations',
         title: 'Cloud Operations',
         classes: "",
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',

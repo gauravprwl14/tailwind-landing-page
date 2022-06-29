@@ -1,3 +1,4 @@
 export const ROUTES = {
-    'contactUs': '/contact-us'
+    'contactUs': '/contact-us',
+    'services': 'services'
 }
