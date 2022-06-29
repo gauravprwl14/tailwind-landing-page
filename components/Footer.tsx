@@ -33,17 +33,6 @@ const Footer = () => {
     return (
         <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover dotted-border-green">
             <div className='flex-1 flex-col py-6 lg:py-12'>
-                {/* <div className='grid md:grid-cols-3 gap-8 pt-8 md:pt-12 auto-rows-fr'>
-                    <div className='flex flex-col justify-around text-white md:col-span-2'>
-                        <NavigationLinks />
-                    </div>
-                    <div className='flex flex-col justify-center text-white md:col-span-1 md:row-span-2 '>
-                        <ActionButton />
-                    </div>
-                    <div className='flex flex-col justify-around text-white md:col-span-2'>
-                        <CopyRightText />
-                    </div>
-                </div> */}
                 <div className='justify-center text-white'>
                     <NavigationLinks />
                 </div>
@@ -53,22 +42,6 @@ const Footer = () => {
                 <div className='justify-center text-white'>
                     <CopyRightText />
                 </div>
-
-
-
-
-
-
-
-                {/* <a
-                className="flex items-center justify-center gap-2"
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Powered by{' '}
-                <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </a> */}
             </div>
         </footer>
     )
