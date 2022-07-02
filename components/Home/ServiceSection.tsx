@@ -1,10 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
+import { ROUTES } from '../../utility/routes'
 
 type MainFeaturesType = {
     text: string
 }
 
 type CardType = {
+    id: string;
     title: string;
     description: string;
     mainFeatures: MainFeaturesType[]
@@ -13,6 +16,7 @@ type CardType = {
 
 const CardJSON = [
     {
+        id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges.',
         mainFeatures: [
@@ -29,6 +33,7 @@ const CardJSON = [
 
     },
     {
+        id: 'Cloud-Migration',
         title: 'Cloud Migration',
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         mainFeatures: [
@@ -45,6 +50,7 @@ const CardJSON = [
 
     },
     {
+        id: 'Cloud-Operations',
         title: 'Cloud Operations',
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         mainFeatures: [
@@ -99,14 +105,18 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                         )
                     })}
                 </div>
-                <div className='flex flex-row justify-center flex-1 items-end'>
-                    <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
-                        <div className='flex flex-row '>
-                            Learn more <img className='ml-2' src="img/right_arrow.svg" />
-                        </div>
-                    </div>
 
-                </div>
+                <Link href={`${ROUTES.services}#${obj.id}`}>
+
+                    <div className='flex flex-row justify-center flex-1 items-end'>
+                        <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
+                            <div className='flex flex-row '>
+                                Learn more <img className='ml-2' src="img/right_arrow.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </Link>
             </div>
         </div>
     )

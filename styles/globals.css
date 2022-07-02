@@ -113,6 +113,10 @@
 .max-w-48 {
     max-width: 48px;
 }
+.max-w-38 {
+    max-width: 38px;
+}
+
 
 .h-inherit {
     height: inherit;
@@ -185,6 +189,24 @@
     .header-wrapper  {
         @apply flex flex-col h-full w-full md:pb-8 bg-no-repeat bg-[url('/img/header_background_01.svg')] bg-cover opacity-90 object-contain;
         text-shadow: 0px 2px 4px #000000;
+    }
+
+    .tracking-wider-v1 {
+        letter-spacing: 0.06em;
+    }
+
+    .tracking-wider-v2 {
+        letter-spacing: 0.2em;
+    }
+    .about-title {
+        @apply font-Comfortaa font-bold text-2xl tracking-wider;
+    }
+    .about-description {
+        @apply font-Poppins font-medium py-3 tracking-wider-v1;
+        font-size: 1.1em;
+    }
+    .about-bullet-pointer-container {
+        @apply pt-1 w-12 mr-3;
     }
   }
 

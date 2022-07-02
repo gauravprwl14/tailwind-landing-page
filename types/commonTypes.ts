@@ -39,6 +39,7 @@ export type ServicePointersType = {
 }
 
 export type ServiceType = {
+    id: string;
     image: ServiceImageType
     title: string;
     description: string;
