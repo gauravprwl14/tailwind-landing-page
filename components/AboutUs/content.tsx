@@ -160,7 +160,7 @@ const Content = () => {
                 {headerContent}
             </div>
 
-            <div className='flex py-7 flex-col align-baseline text-left'>
+            <div className='flex px-4 lg:px-none py-7 flex-col align-baseline text-left'>
 
                 <div className='about-title !text-xl'>
                     Quality Over Quantity
