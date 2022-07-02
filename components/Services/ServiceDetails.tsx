@@ -68,6 +68,15 @@ const alignSection = (position: string) => {
     }
 }
 
+const animationClass = (position: string) => {
+    if (position === 'left') {
+        return 'slide-left'
+    }
+    if (position === 'right') {
+        return 'slide-right'
+    }
+}
+
 const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
@@ -78,7 +87,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className={`section-container ${serviceObj.classes}`} id={serviceObj.id || "randomid"}>
+                        <div className={`section-container ${animationClass(serviceObj.image.position)} ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
                             <div className='flex flex-col lg:flex-row flex-1 h-full'>
 
                                 {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} />}
