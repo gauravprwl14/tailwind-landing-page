@@ -243,7 +243,7 @@
 
   /***** Slide Right *****/
 .slide-right {
-    animation: 3s slide-right;
+    animation: 2s slide-right;
   }
   @keyframes slide-right {
     from {
@@ -256,7 +256,7 @@
   
   /***** Slide Left *****/
   .slide-left {
-    animation: 3s slide-left;
+    animation: 2s slide-left;
   }
   @keyframes slide-left {
     from {
