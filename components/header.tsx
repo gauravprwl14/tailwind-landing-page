@@ -16,13 +16,13 @@ const Header = () => {
         <div className='relative my-6 mx-16'>
             <div className=" flex flex-1 justify-center">
                 <div className="space-x-6 max-w-screen-xl -ml-4 py-4">
-                    <a href="/" className="text-white">Home</a>
-                    <a href="/services.html" className="text-white">What we do</a>
-                    <a href="#" className="text-white">About Us</a>
+                    <a href={ROUTES.home} className="text-white">Home</a>
+                    <a href={ROUTES.services} className="text-white">What we do</a>
+                    <a href={ROUTES.aboutUs} className="text-white">About Us</a>
                 </div>
             </div>
             <div className='absolute top-0 right-0'>
-                <Link href={ROUTES.contactUs}>
+                <Link href={ROUTES.aboutUs}>
                     <a href="#" className="hidden p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg baselin md:block">Contact Us</a>
                     {/* hover:bg-green-300 */}
                 </Link>
