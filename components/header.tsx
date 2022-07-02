@@ -16,9 +16,9 @@ const Header = () => {
         <div className='relative my-6 mx-16'>
             <div className=" flex flex-1 justify-center">
                 <div className="space-x-6 max-w-screen-xl -ml-4 py-4">
-                    <a href={ROUTES.home} className="text-white">Home</a>
-                    <a href={ROUTES.services} className="text-white">What we do</a>
-                    <a href={ROUTES.aboutUs} className="text-white">About Us</a>
+                    <a href={ROUTES.home} className="text-white hover:text-electricGreen">Home</a>
+                    <a href={ROUTES.services} className="text-white hover:text-electricGreen">What we do</a>
+                    <a href={ROUTES.aboutUs} className="text-white hover:text-electricGreen">About Us</a>
                 </div>
             </div>
             <div className='absolute top-0 right-0'>

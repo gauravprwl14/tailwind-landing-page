@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 const NavigationLinks = () => {
     return (
-        <div className='flex flex-row items-center justify-center'>
-            <div className='px-6'>Home</div>
-            <div className='px-6'>What we do</div>
-            <div className='px-6'>About us</div>
+        <div className='flex flex-row items-center justify-center cursor-pointer'>
+            <div className='px-6 hover:text-electricGreen'>Home</div>
+            <div className='px-6 hover:text-electricGreen'>What we do</div>
+            <div className='px-6 hover:text-electricGreen'>About us</div>
         </div>
     )
 }
