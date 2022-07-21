@@ -119,7 +119,7 @@ const BulletList = ({ arr }: { arr: [] }) => {
             {arr.map((list: any, index) => {
                 return (
                     <>
-                        <li key={index} className="list-disc font-Poppins font-medium text-base">{list.point}</li>
+                        <li key={index} className="list-disc">{list.point}</li>
                         {list && list.pointers && list.pointers.length ? <BulletList arr={list.pointers} /> : null}
                     </>
                 )
@@ -141,8 +141,8 @@ const ExpertiseSection = ({ obj }: { obj: any }) => {
             </div>
 
             <div className='w-full'>
-                <div className='about-title'> {obj.title}</div>
-                <div className='mt-2 font-Poppins font-medium text-base  '> {obj.description}</div>
+                <div className='about-title '> {obj.title}</div>
+                <div className='mt-2 font-Poppins font-normal text-base leading-6 text-black'> {obj.description}</div>
                 <div className='mx-4'>
                     <BulletList arr={obj.pointers} />
                 </div>
@@ -166,7 +166,7 @@ const Content = () => {
                 </div>
             </div>
 
-            <div className='flex px-4 lg:px-none py-7 flex-col align-baseline text-left'>
+            {/* <div className='flex px-4 lg:px-none py-7 flex-col align-baseline text-left'>
 
                 <div className='about-title !text-xl'>
                     Quality Over Quantity
@@ -176,15 +176,25 @@ const Content = () => {
                     We are not a power-by-the-hour outsourcing shop. We are a boutique firm laser-focused on providing a personalized digital transformation experience. To provide the best service possible, we take on a very limited number of clients, ensuring that we are not overloaded, allowing us to focus on delivering value and results quickly.
                 </div>
 
-            </div>
+            </div> */}
 
 
             <div className='flex flex-1 flex-col align-middle w-full'>
 
-                <div className='about-title'> Our Expertise </div>
+                {/* <div className='about-title'> Our Expertise </div> */}
 
-                <div className='text-left px-3'>
-                    {ExpertiseJSON.map((obj, index) => <ExpertiseSection obj={obj} key={index} />)}
+                <div className='text-left px-3 '>
+                    {ExpertiseJSON.map((obj, index) => {
+                        const alignLeft = index % 2 === 0
+
+                        return (
+                            <div className={`flex ${alignLeft ? 'justify-start' : 'justify-end'}`}>
+                                <div className='w-1/2'>
+                                    <ExpertiseSection obj={obj} key={index} />
+                                </div>
+                            </div>
+                        )
+                    })}
                 </div>
 
             </div>
