@@ -38,7 +38,7 @@ const CardJSON = [
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         mainFeatures: [
             {
-                text: 'Migrate legacy systems, as-is, to the clouds..'
+                text: 'Migrate legacy systems, as-is, to the clouds.'
             },
             {
                 text: 'Rebuild existing systems using cloud-native architecture & standards.'
@@ -99,7 +99,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                                 <div className='bullet-image-container-narrow'>
                                     <img className='max-w-none' src="img/bullet_point.svg" />
                                 </div>
-                                <div className='bullet-point-text pl-3 '>{pointer.text}</div>
+                                <div className='bullet-point-text pl-3 !font-normal'>{pointer.text}</div>
                             </div>
 
                         )
