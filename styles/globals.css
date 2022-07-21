@@ -159,6 +159,13 @@
     @apply after:absolute after:w-24  md:after:w-28 after:h-8 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:-right-32 md:after:-bottom-6 after:-right-4 after:-bottom-10
 }
 
+
+.footer-action-btn-container {
+    @apply mt-auto p-3 px-6 border-2 text-white border-white bg-electricGreen rounded-lg font-Poppins font-medium
+}
+
+
+
 @responsive {
     .w-456 {
         width: 456px;
@@ -183,6 +190,11 @@
     
     .h-741 {
         height: 741px;
+    }
+
+
+    .min-w-9 {
+        min-width: 9.5rem;
     }
 
 

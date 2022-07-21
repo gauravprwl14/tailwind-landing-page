@@ -1,12 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { ROUTES } from '../utility/routes'
 
 const NavigationLinks = () => {
     return (
         <div className='flex flex-row items-center justify-center cursor-pointer'>
-            <div className='px-6 hover:text-electricGreen'>Home</div>
-            <div className='px-6 hover:text-electricGreen'>What we do</div>
-            <div className='px-6 hover:text-electricGreen'>About us</div>
+            <Link href={ROUTES.home}><div className='px-6 hover:text-electricGreen'>Home</div></Link>
+            <Link href={ROUTES.services}><div className='px-6 hover:text-electricGreen'>What we do</div></Link>
+            <Link href={ROUTES.aboutUs}><div className='px-6 hover:text-electricGreen'>About us</div></Link>
         </div>
     )
 }
@@ -14,7 +16,7 @@ const ActionButton = () => {
     return (
         <div className='flex justify-center lg:justify-end items-center'>
             <button
-                className='mt-auto p-3 px-6 border-4 text-white border-white bg-electricGreen rounded-lg baseline font-Poppins font-medium'
+                className='footer-action-btn-container'
             >
                 Get in touch
             </button>

@@ -109,6 +109,7 @@ const Services = () => {
             <Head>
                 <title>Bike Cloud</title>
                 <link rel="icon" href="/favicon.ico" />
+                <script src="//code.tidio.co/o15ez6py54cdrz9m7thr2o7g77amftv0.js" async></script>
             </Head>
             <div className="w-full h-80 lg:h-96" >
 
