@@ -1,7 +1,8 @@
 import React from 'react'
 
 
-const headerContent = "We’re an elite team of senior digital leaders with a unique set of skills and experience, exclusively focused on building and launching digital transformation projects."
+const headerContent = "An elite team of senior digital transformation leaders"
+const description = "We are a boutique firm laser-focused on providing a personalized digital transformation experience. To provide the best service possible, we take on a very limited number of clients, ensuring that we are not overloaded and allowing us to focus on quickly delivering value and results."
 
 
 
@@ -156,8 +157,13 @@ const Content = () => {
 
     return (
         <div className='section-container'>
-            <div className='text-eerieBlack text-2xl font-bold font-Comfortaa tracking-widest'>
-                {headerContent}
+            <div>
+                <div className='about-us-title'>
+                    {headerContent}
+                </div>
+                <div className='about-us-description'>
+                    {description}
+                </div>
             </div>
 
             <div className='flex px-4 lg:px-none py-7 flex-col align-baseline text-left'>

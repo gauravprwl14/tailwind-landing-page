@@ -4,8 +4,8 @@ import Header from '../components/header'
 import Footer from '../components/Footer'
 import Content from '../components/AboutUs/content'
 
-const title = 'BikeCloud'
-const description = 'A boutique firm focused on delivering quality'
+const title = 'A boutique digital transformation firm'
+const description = 'Exclusively focused on building and launching digital transformation projects'
 
 
 
@@ -24,6 +24,7 @@ const AboutUs: NextPage = () => {
                     description={description}
                     bgContainer="bg-bottom"
                     headerContainer="mt-3 leading-5"
+                    titleStyle="!custom-text-large mb-2"
                 />
             </div>
 
