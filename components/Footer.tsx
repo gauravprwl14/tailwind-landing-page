@@ -16,7 +16,7 @@ const ActionButton = () => {
     return (
         <div className='flex justify-center lg:justify-end items-center'>
             <button
-                className='footer-action-btn-container'
+                className='footer-action-btn-container hover:bg-electricGreen300'
             >
                 Get in touch
             </button>

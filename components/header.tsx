@@ -25,7 +25,7 @@ const Header = () => {
             <div className='absolute top-0 right-0'>
                 <Link href={ROUTES.aboutUs}>
                     {/* <a href="#" className="hidden p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg baselin md:block">Contact Us</a> */}
-                    <button className="hidden mt-2 footer-action-btn-container md:block min-w-9">Contact Us</button>
+                    <button className="hidden mt-2 footer-action-btn-container md:block min-w-9 hover:bg-electricGreen300">Contact Us</button>
                     {/* hover:bg-green-300 */}
                 </Link>
             </div>

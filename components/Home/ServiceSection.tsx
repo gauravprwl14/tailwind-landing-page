@@ -109,7 +109,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                 <Link href={`${ROUTES.services}#${obj.id}`}>
 
                     <div className='flex flex-row justify-center flex-1 items-end cursor-pointer'>
-                        <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
+                        <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen hover:bg-electricGreen300 rounded-lg w-auto inline-block'>
                             <div className='flex flex-row '>
                                 Learn more <img className='ml-2' src="img/right_arrow.svg" />
                             </div>
