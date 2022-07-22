@@ -40,8 +40,8 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
             pointers.map((pointer, index) => {
                 return (
                     <div key={index} className="pointer-container py-2">
-                        <div className='pointer-bullet-container mr-7'>
-                            <img className='max-w-48' src="img/bullet_style_02.svg" />
+                        <div className='bullet-image-container-wider'>
+                            <img className='max-w-48 w-full' src="img/bullet_point.svg" />
                         </div>
                         <div>
                             <div className='bullet-point-style-02-text pl-3 '>{pointer.title}</div>
@@ -70,8 +70,8 @@ const KeyValues = () => {
                 </div>
 
                 <div className='flex flex-col lg:flex-row flex-1 h-full mt-4'>
-                    <div className="flex justify-center">
-                        <div className="w-1/2 lg:w-full">
+                    <div className="flex justify-center flex-1">
+                        <div className="w-3/4 lg:w-full">
                             <ImageContainer src={obj.image} />
                         </div>
                     </div>

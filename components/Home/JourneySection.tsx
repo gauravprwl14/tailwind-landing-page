@@ -4,8 +4,7 @@ export const JourneySection = () => {
     return (
         <div className='section-container !pb-16'>
             <div className='title'>
-                A digital transformation journey that
-                <div>delivers results</div>
+                A digital transformation journey that delivers results
             </div>
             <div className='description'>Taking a project from the idea stage to the finish line requires a unique set of
                 specialized skills and experience. Using our exclusive JUMP™ system, we’ll lead your project through each stage,

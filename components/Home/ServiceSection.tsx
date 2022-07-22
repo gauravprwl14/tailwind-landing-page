@@ -1,10 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
+import { ROUTES } from '../../utility/routes'
 
 type MainFeaturesType = {
     text: string
 }
 
 type CardType = {
+    id: string;
     title: string;
     description: string;
     mainFeatures: MainFeaturesType[]
@@ -13,6 +16,7 @@ type CardType = {
 
 const CardJSON = [
     {
+        id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges.',
         mainFeatures: [
@@ -29,22 +33,24 @@ const CardJSON = [
 
     },
     {
-        title: 'Cloud-Native Software',
-        description: 'Build beautiful software that perfectly solves your business challenges.',
+        id: 'Cloud-Migration',
+        title: 'Cloud Migration',
+        description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         mainFeatures: [
             {
-                text: 'Beautiful cloud-native applications for mobile, web, and desktop.'
+                text: 'Migrate legacy systems, as-is, to the clouds.'
             },
             {
-                text: 'Rebuild legacy applications to be cloud-native.'
+                text: 'Rebuild existing systems using cloud-native architecture & standards.'
             },
             {
-                text: 'Enterprise-level backend software for cloud-native services. '
+                text: 'Move stand-alone workloads to the cloud.'
             },
         ]
 
     },
     {
+        id: 'Cloud-Operations',
         title: 'Cloud Operations',
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         mainFeatures: [
@@ -90,23 +96,27 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                     {obj.mainFeatures.map((pointer, index) => {
                         return (
                             <div key={index} className="pointer-container py-2">
-                                <div className='pointer-bullet-container'>
+                                <div className='bullet-image-container-narrow'>
                                     <img className='max-w-none' src="img/bullet_point.svg" />
                                 </div>
-                                <div className='bullet-point-text pl-3 '>{pointer.text}</div>
+                                <div className='bullet-point-text pl-3 !font-normal'>{pointer.text}</div>
                             </div>
 
                         )
                     })}
                 </div>
-                <div className='flex flex-row justify-center flex-1 items-end'>
-                    <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
-                        <div className='flex flex-row '>
-                            Learn more <img className='ml-2' src="img/right_arrow.svg" />
-                        </div>
-                    </div>
 
-                </div>
+                <Link href={`${ROUTES.services}#${obj.id}`}>
+
+                    <div className='flex flex-row justify-center flex-1 items-end cursor-pointer'>
+                        <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen hover:bg-electricGreen300 rounded-lg w-auto inline-block'>
+                            <div className='flex flex-row '>
+                                Learn more <img className='ml-2' src="img/right_arrow.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </Link>
             </div>
         </div>
     )
