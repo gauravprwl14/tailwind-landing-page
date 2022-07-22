@@ -4,7 +4,9 @@ import React from 'react'
 const headerContent = "An elite team of senior digital transformation leaders"
 const description = "We are a boutique firm laser-focused on providing a personalized digital transformation experience. To provide the best service possible, we take on a very limited number of clients, ensuring that we are not overloaded and allowing us to focus on quickly delivering value and results."
 
-
+const isFunc = (val: any) => {
+    return typeof val === 'function'
+}
 
 const ExpertiseJSON = [
     {
@@ -27,44 +29,48 @@ const ExpertiseJSON = [
     },
     {
         title: 'Architecture & Infrastructure',
-        description: `We design and lead cloud solution implementations that solve a company’s strategic challenges and increase performance, reliability, availability, and scalability.`,
+        description: () => {
+            return (
+                <div className=''>
+                    <div className='mb-3'>
+                        We design and lead cloud solution implementations that solve a company’s strategic challenges and increase performance, reliability, availability, and scalability.
+                    </div>
+                    <div className='mb-3'>Enterprise-level solutions architect building mission-critical, high-availability, high-performance, high-scalability cloud solutions.</div>
+                    <div className='mb-3'>
+                        Expert in implementing Microsoft Azure cloud solutions, including compute, networking, storage, data platforms, monitoring, identity management, and security.
+                    </div>
+                    <div className='mb-3'>
+                        Real-world experience successfully delivering:
+                    </div>
+                </div>
+            )
+        },
         pointers: [
             {
-                point: 'Enterprise-level solutions architect building mission-critical, high-availability, high-performance, high-scalability cloud solutions.',
-                pointers: []
+                point: "API-first architecture"
             },
             {
-                point: 'Expert in implementing Microsoft Azure cloud solutions, including compute, networking, storage, data platforms, monitoring, identity management, and security.',
-                pointers: []
+                point: "Infrastructure-as-Code"
             },
             {
-                point: 'Real-world experience successfully delivering:',
-                pointers: [
-                    {
-                        point: "API-first architecture"
-                    },
-                    {
-                        point: "Infrastructure-as-Code"
-                    },
-                    {
-                        point: "Microservices and distributed systems"
-                    },
-                    {
-                        point: "Kubernetes deployments"
-                    },
-                    {
-                        point: "Database architecture & implementations"
-                    },
-                    {
-                        point: "Elastic (ELK) stack deployments"
-                    },
-                ]
-            }
+                point: "Microservices and distributed systems"
+            },
+            {
+                point: "Kubernetes deployments"
+            },
+            {
+                point: "Database architecture & implementations"
+            },
+            {
+                point: "Elastic (ELK) stack deployments"
+            },
         ]
     },
     {
         title: 'Software & Platforms',
-        description: `Experienced in a broad cross-section of languages, platforms and frameworks. Focused on implementing a solution that best solves a company’s unique challenges.`,
+        description: " Experienced in a broad cross-section of languages, platforms and frameworks. Focused on implementing a solution that best solves a company’s unique challenges.",
+
+
         pointers: [
             {
                 point: 'Specialized in Azure cloud with significant experience deploying solutions on other cloud platforms such as AWS, Heroku, Digital Ocean, and Firebase.',
@@ -142,7 +148,7 @@ const ExpertiseSection = ({ obj }: { obj: any }) => {
 
             <div className='w-full'>
                 <div className='about-title '> {obj.title}</div>
-                <div className='mt-2 font-Poppins font-normal text-base leading-6 text-black'> {obj.description}</div>
+                <div className='my-2 font-Poppins font-normal text-base leading-6 text-black'> {isFunc(obj.description) ? obj.description() : obj.description}</div>
                 <div className='mx-4'>
                     <BulletList arr={obj.pointers} />
                 </div>
@@ -163,6 +169,7 @@ const Content = () => {
                 </div>
                 <div className='about-us-description'>
                     {description}
+                    {/* {typeof description === 'function' ? description() : description} */}
                 </div>
             </div>
 
