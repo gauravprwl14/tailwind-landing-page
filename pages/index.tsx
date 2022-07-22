@@ -37,27 +37,29 @@ const TestimonialJSON = {
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <Head>
         <title>Bike Cloud</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="//code.tidio.co/o15ez6py54cdrz9m7thr2o7g77amftv0.js" async></script>
       </Head>
 
-      <div className="w-full" style={{ height: '32rem' }}>
-
+      <div className="w-full h-80  lg:h-96" >
         <Header
           title={title}
           description={description}
+          bgContainer="bg-bottom"
+          headerContainer="mt-3 leading-5"
         />
       </div>
 
 
 
-      <main className="page-container">
+      <main className="page-container" >
         <JourneySection />
         <CtaSection />
         <ServiceSection />
-        <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
+        {/* <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} /> */}
 
         {/* <h1 className="text-6xl font-bold">
           Welcome to{' '}

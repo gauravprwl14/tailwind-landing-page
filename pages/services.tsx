@@ -4,6 +4,7 @@ import Head from 'next/head'
 import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
+import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
 
 
@@ -20,6 +21,7 @@ const ServiceJSON = [
             position: 'left',
             classes: 'items-center'
         },
+        id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges',
         ctaDescription: 'Let’s work together on your next software project',
@@ -45,6 +47,7 @@ const ServiceJSON = [
             position: 'right',
             classes: 'items-center'
         },
+        id: 'Cloud-Migration',
         title: 'Cloud Migration',
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         ctaDescription: 'Let’s work together on your cloud migration',
@@ -68,9 +71,11 @@ const ServiceJSON = [
         image: {
             src: '/img/cloud_operation.svg',
             position: 'left',
-            classes: 'items-baseline cloud-operation-img-container'
+            classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto lg:-mt-16'
         },
+        id: 'Cloud-Operations',
         title: 'Cloud Operations',
+        classes: "",
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         ctaDescription: 'Let’s work together on your next software project',
         pointers: [
@@ -100,19 +105,25 @@ const TestimonialJSON = {
 
 const Services = () => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center py-2">
+        <div className="flex min-h-screen flex-col items-center justify-center">
             <Head>
                 <title>Bike Cloud</title>
                 <link rel="icon" href="/favicon.ico" />
+                <script src="//code.tidio.co/o15ez6py54cdrz9m7thr2o7g77amftv0.js" async></script>
             </Head>
-            <Header
-                title={title}
-                description={description}
-            />
+            <div className="w-full h-80 lg:h-96" >
+
+                <Header
+                    title={title}
+                    description={description}
+                    bgContainer="bg-bottom"
+                    headerContainer="mt-3"
+                />
+            </div>
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <Testimonial userDetails={TestimonialJSON.userDetails} userTestimonial={TestimonialJSON.testimonial} />
+                <CtaSection />
                 <KeyValues />
 
             </main>

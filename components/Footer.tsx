@@ -1,48 +1,57 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+import { ROUTES } from '../utility/routes'
+
+const NavigationLinks = () => {
+    return (
+        <div className='flex flex-row items-center justify-center cursor-pointer'>
+            <Link href={ROUTES.home}><div className='px-6 hover:text-electricGreen'>Home</div></Link>
+            <Link href={ROUTES.services}><div className='px-6 hover:text-electricGreen'>What we do</div></Link>
+            <Link href={ROUTES.aboutUs}><div className='px-6 hover:text-electricGreen'>About us</div></Link>
+        </div>
+    )
+}
+const ActionButton = () => {
+    return (
+        <div className='flex justify-center lg:justify-end items-center'>
+            <button
+                className='footer-action-btn-container hover:bg-electricGreen300'
+            >
+                Get in touch
+            </button>
+        </div>
+    )
+}
+const CopyRightText = () => {
+    return (
+        <div className='text-center justify-items-end '>© 2022 BikeCloud. All rights reserved.</div>
+    )
+}
+
+
 
 const Footer = () => {
     return (
-        <footer className="flex h-56 w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-no-repeat bg-cover">
-            <div className='grid grid-cols-3 h-full'>
-                <div className='col-start-2'>
-                    <div className='flex flex-col justify-around h-full text-white'>
-                        <div className='flex flex-row items-center justify-space-around'>
-                            <div className='px-8'>Home</div>
-                            <div className='px-8'>What we do</div>
-                            <div className='px-8'>About us</div>
-
-                        </div>
-                        <div className='text-center'>© 2022 BikeCloud. All rights reserved.</div>
-                    </div>
+        <footer className="flex w-full items-center justify-center bg-[url('/img/footer_bg.svg')] bg-[#303030] bg-no-repeat bg-cover dotted-border-green">
+            <div className='flex-1 flex-col py-6 lg:py-12'>
+                <div className='justify-center text-white'>
+                    <NavigationLinks />
                 </div>
-
+                <div className='text-white my-4 lg:mt-6 lg:mr-40'>
+                    <ActionButton />
+                </div>
+                <div className='justify-center text-white'>
+                    <CopyRightText />
+                </div>
             </div>
-
-            <div className='flex justify-center items-center'>
-                <button
-                    className='mt-10 p-3 px-6 border-4 text-white border-white bg-electricGreen rounded-lg baseline font-Poppins font-medium'
-                >
-                    Get in touch
-                </button>
-            </div>
-
-
-
-
-
-
-            {/* <a
-                className="flex items-center justify-center gap-2"
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Powered by{' '}
-                <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-            </a> */}
-        </footer >
+        </footer>
     )
 }
+
+
+
+
+
 
 export default Footer

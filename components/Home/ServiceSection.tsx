@@ -1,10 +1,13 @@
 import React from 'react'
+import Link from 'next/link'
+import { ROUTES } from '../../utility/routes'
 
 type MainFeaturesType = {
     text: string
 }
 
 type CardType = {
+    id: string;
     title: string;
     description: string;
     mainFeatures: MainFeaturesType[]
@@ -13,6 +16,7 @@ type CardType = {
 
 const CardJSON = [
     {
+        id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
         description: 'Build beautiful software that perfectly solves your business challenges.',
         mainFeatures: [
@@ -29,22 +33,24 @@ const CardJSON = [
 
     },
     {
-        title: 'Cloud-Native Software',
-        description: 'Build beautiful software that perfectly solves your business challenges.',
+        id: 'Cloud-Migration',
+        title: 'Cloud Migration',
+        description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
         mainFeatures: [
             {
-                text: 'Beautiful cloud-native applications for mobile, web, and desktop.'
+                text: 'Migrate legacy systems, as-is, to the clouds.'
             },
             {
-                text: 'Rebuild legacy applications to be cloud-native.'
+                text: 'Rebuild existing systems using cloud-native architecture & standards.'
             },
             {
-                text: 'Enterprise-level backend software for cloud-native services. '
+                text: 'Move stand-alone workloads to the cloud.'
             },
         ]
 
     },
     {
+        id: 'Cloud-Operations',
         title: 'Cloud Operations',
         description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
         mainFeatures: [
@@ -62,23 +68,23 @@ const CardJSON = [
 const Card = ({ cardObj }: { cardObj: CardType }) => {
     const obj = cardObj
     return (
-        <div className='flex flex-col items-center relative overflow-hidden'>
+        <div className='flex flex-col items-center relative overflow-hidden  mt-4 lg:mt-0 flex-1 mx-3'>
             <div className=''>
-                <div className='absolute top-0 left-2 right-0'>
+                <div className='absolute top-0 left-2 right-0 mx-2 '>
                     <img src="img/top_horizontal_line.svg" />
                 </div>
                 <div className='absolute -bottom-0 left-3 right-3'>
                     <img src="img/bottom_horizontal_line.svg" />
                 </div>
-                <div className='absolute left-0 top-0 '>
+                <div className='absolute left-0 top-1 '>
                     <img src="img/left_vertical_line.svg" />
                 </div>
-                <div className='absolute right-0 top-0 left-auto'>
+                <div className='absolute right-0 top-1 left-auto'>
                     <img src="img/right_vertical_line.svg" />
                 </div>
             </div>
 
-            <div className='py-8 px-5 '>
+            <div className='py-8 px-5 flex flex-col flex-1'>
 
                 <div className='card-title'>
                     {obj.title}
@@ -90,23 +96,27 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
                     {obj.mainFeatures.map((pointer, index) => {
                         return (
                             <div key={index} className="pointer-container py-2">
-                                <div className='pointer-bullet-container'>
+                                <div className='bullet-image-container-narrow'>
                                     <img className='max-w-none' src="img/bullet_point.svg" />
                                 </div>
-                                <div className='bullet-point-text pl-3 '>{pointer.text}</div>
+                                <div className='bullet-point-text pl-3 !font-normal'>{pointer.text}</div>
                             </div>
 
                         )
                     })}
                 </div>
-                <div className=''>
-                    <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen rounded-lg w-auto inline-block'>
-                        <div className='flex flex-row '>
-                            Learn more <img className='ml-2' src="img/right_arrow.svg" />
-                        </div>
-                    </div>
 
-                </div>
+                <Link href={`${ROUTES.services}#${obj.id}`}>
+
+                    <div className='flex flex-row justify-center flex-1 items-end cursor-pointer'>
+                        <div className='p-3 px-6 pt-2 text-veryLightGray bg-electricGreen hover:bg-electricGreen300 rounded-lg w-auto inline-block'>
+                            <div className='flex flex-row '>
+                                Learn more <img className='ml-2' src="img/right_arrow.svg" />
+                            </div>
+                        </div>
+
+                    </div>
+                </Link>
             </div>
         </div>
     )
@@ -115,7 +125,7 @@ const Card = ({ cardObj }: { cardObj: CardType }) => {
 const CardContainer = () => {
     return (
         <div>
-            <div className='card-container'>
+            <div className='flex flex-col lg:flex-row'>
                 {
                     CardJSON.map((cardObject) => {
                         return (<Card cardObj={cardObject} />)
@@ -133,7 +143,6 @@ const ServiceSection = () => {
 
             <div className='title'>Take a journey with us  </div>
             <div className='description'>We are specifically focused on launching cloud-native projects. Our high-performance team will design, build, and launch the perfect solution for your unique challenges.  </div>
-            <div> ----- </div>
 
             <div>
                 <CardContainer />

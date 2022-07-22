@@ -32,6 +32,7 @@ module.exports = {
                 charcoal: '#3A475B',
                 veryLightGray: '#F0FDF4',
                 electricGreen: '#7EC636',
+                electricGreen300: '#67C350',
 
                 "transparent": "#000000",
                 "black": "#000000",

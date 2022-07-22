@@ -40,8 +40,8 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
             pointers.map((pointer, index) => {
                 return (
                     <div key={index} className="pointer-container py-2">
-                        <div className='pointer-bullet-container mr-7'>
-                            <img className='max-w-48' src="img/bullet_style_02.svg" />
+                        <div className='bullet-image-container-wider'>
+                            <img className='max-w-48 w-full' src="img/bullet_point.svg" />
                         </div>
                         <div>
                             <div className='bullet-point-style-02-text pl-3 '>{pointer.title}</div>
@@ -58,7 +58,7 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
 const KeyValues = () => {
     const obj = KeyValuesJson[0]
     return (
-        <div className='flex w-full dotted-border-green'>
+        <div className='flex w-full dotted-border-green items-center justify-center'>
             <div className='section-container'>
                 <div className='text-left'>
                     <div className='h1 pb-3'> Our JUMP™ System </div>
@@ -69,8 +69,12 @@ const KeyValues = () => {
                     </div>
                 </div>
 
-                <div className='flex flex-row flex-1 h-full mt-4'>
-                    <ImageContainer src={obj.image} />
+                <div className='flex flex-col lg:flex-row flex-1 h-full mt-4'>
+                    <div className="flex justify-center flex-1">
+                        <div className="w-3/4 lg:w-full">
+                            <ImageContainer src={obj.image} />
+                        </div>
+                    </div>
                     <div className='flex flex-col flex-1 text-left justify-center pl-4'>
                         <BulletPoint pointers={obj.pointers} />
                     </div>
