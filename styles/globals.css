@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -159,6 +160,15 @@
     @apply after:absolute after:w-24  md:after:w-28 after:h-8 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:-right-32 md:after:-bottom-6 after:-right-4 after:-bottom-10
 }
 
+.service-page-cta-quote-left {
+    @apply before:absolute before:w-28 before:h-8 before:content-[""] before:bg-[url("/img/quotes.svg")] before:bg-no-repeat md:before:left-16 md:before:top-6 before:-top-10 before:left-0
+}
+
+
+.service-page-cta-quote-right {
+    @apply after:absolute after:w-24  md:after:w-28 after:h-8 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:right-16 md:after:top-14 after:-right-4 after:-bottom-10
+}
+
 
 .footer-action-btn-container {
     @apply mt-auto p-3 px-6 border-2 text-white border-white bg-electricGreen rounded-lg font-Poppins font-medium
@@ -195,6 +205,11 @@
 
     .min-w-9 {
         min-width: 9.5rem;
+    }
+
+    .text-outline {
+        text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black
+
     }
 
 

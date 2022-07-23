@@ -43,10 +43,10 @@ export const HeaderContainer = ({ title, description, bgContainer, headerContain
         <div className={`header-wrapper ${bgContainer}`}>
             <Header />
 
-            <section id="header-background" className={`flex w-full flex-1 flex-col items-center  px-4 text-center font-Comfortaa ${headerContainer}`}>
+            <section id="header-background" className={`flex w-full flex-1 flex-col items-center  px-4 text-center text-outline ${headerContainer}`}>
                 <div className='flex flex-col max-w-screen-xl space-y-4 text-white  items-center justify-center'>
-                    <div className={`text-3xl  lg:text-extra-large tracking-tight font-thin leading-tight max-w-4xl ${titleStyle}`}>{title} </div>
-                    <div className='text-xl md:text-2xl lg:text-3xl text-electricGreen  tracking-tight'>{description} </div>
+                    <div className={`text-3xl  lg:text-extra-large tracking-tight font-thin leading-tight max-w-4xl font-Comfortaa${titleStyle}`}>{title} </div>
+                    <div className='text-xl md:text-2xl lg:text-3xl text-electricGreen  tracking-tight font-Roboto font-normal'>{description} </div>
                 </div>
 
             </section>
