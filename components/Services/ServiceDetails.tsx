@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
+import CtaSection from '../Home/CtaSection'
 import Button from '../button'
 import { ServiceType, ServicePointersType, ServiceImageType } from '../../types/commonTypes'
 type ImageContainerPropTypes = {
@@ -94,23 +95,26 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className={`section-container ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
-                            <div className='flex flex-col lg:flex-row'>
+                        <div className={`w-full ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
+                            <div className='section-container'>
+                                <div className='flex flex-col lg:flex-row'>
 
-                                {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} position='right' />}
-                                <div className={`flex flex-col flex-1 text-left pl-4 wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
-                                    <div className='service-title mb-5'>{serviceObj.title}</div>
-                                    <div className='text-medium' >{serviceObj.description}</div>
-                                    <BulletList lists={serviceObj.pointers} />
+                                    {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} position='right' />}
+                                    <div className={`flex flex-col flex-1 text-left pl-4 wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
+                                        <div className='service-title mb-5'>{serviceObj.title}</div>
+                                        <div className='text-medium' >{serviceObj.description}</div>
+                                        <BulletList lists={serviceObj.pointers} />
+                                    </div>
+                                    {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} position='left' />}
+
                                 </div>
-                                {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} position='left' />}
-
                             </div>
 
                             <div className={`flex w-full  wow animate__animated animate__fadeInLeft ${alignSection(serviceObj.image.position)}`}>
-                                <div className="lg:basis-1/2">
+                                {/* <div className="lg:basis-1/2">
                                     <WorkTogetherSection description={serviceObj.ctaDescription} />
-                                </div>
+                                </div> */}
+                                <CtaSection />
                             </div>
 
                         </div>
