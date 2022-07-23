@@ -295,3 +295,51 @@
   .about-us-description {
     @apply text-eerieBlack text-lg font-medium font-Poppins md:px-20 px-4 py-6 pb-16;
   }
+
+
+  @keyframes custom-fadeInRight {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(10%, 0, 0);
+      transform: translate3d(10%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+
+  
+
+
+  @keyframes custom-fadeInLeft {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(-10%, 0, 0);
+      transform: translate3d(-10%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+
+
+
+  .animate__fadeInRight {
+    -webkit-animation-name: custom-fadeInRight;
+    animation-name: custom-fadeInRight;
+  }
+  .animate__fadeInLeft {
+    -webkit-animation-name: custom-fadeInLeft;
+    animation-name: custom-fadeInLeft;
+  }
+  
+
+  
