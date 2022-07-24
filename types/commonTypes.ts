@@ -43,7 +43,10 @@ export type ServiceType = {
     image: ServiceImageType
     title: string;
     description: string;
-    ctaDescription: string;
+    cta: {
+        description: String;
+        style: String;
+    }
     pointers: ServicePointersType[]
     classes?: string;
 }

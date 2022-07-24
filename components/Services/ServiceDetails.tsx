@@ -14,12 +14,12 @@ const WOW = !isServer ? require('wowjs') : null
 console.log('%c WOW ', 'background: lime; color: black', { WOW });
 
 
-const CTASection = ({ text }: { text: String }) => {
+const CTASection = ({ description, style }: { description: String; style: String; }) => {
     return (
         <div className='bg-electricGreen flex w-full items-center justify-center'>
             <div className='section-container h-56 border-t relative !pt-11'>
                 <div className='service-page-cta-quote-left service-page-cta-quote-right'>
-                    <div className='text-white font-GloriaHallelujah text-5xl leading-12 tracking-tightest'> {text}</div>
+                    <div className={`text-white font-GloriaHallelujah text-5xl leading-12 tracking-tightest ${style}`}> {description}</div>
                 </div>
                 <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray hover:bg-gray-200 rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
             </div>
@@ -113,9 +113,9 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
+                        <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"} key={index}>
                             <div className='section-container px-12 '>
-                                <div className='grid grid-cols-12 lg:flex-row min-h-[642px]'>
+                                <div className={`grid grid-cols-12 lg:flex-row ${index === 2 ? 'min-h-[542px]' : 'min-h-[642px]'}`}>
 
 
                                     {serviceObj.image.position === 'left' && (
@@ -149,7 +149,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                 {/* <div className="lg:basis-1/2">
                                     <WorkTogetherSection description={serviceObj.ctaDescription} />
                                 </div> */}
-                                <CTASection text={serviceObj.ctaDescription} />
+                                <CTASection description={serviceObj.cta.description} style={serviceObj.cta.style} />
                             </div>
 
                         </div>
