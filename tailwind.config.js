@@ -14,7 +14,8 @@ module.exports = {
             fontFamily: {
                 Comfortaa: ['Comfortaa', "cursive"],
                 Poppins: ['Poppins', 'sans-serif'],
-                GloriaHallelujah: ['Gloria Hallelujah', 'cursive']
+                GloriaHallelujah: ['Gloria Hallelujah', 'cursive'],
+                Roboto: ['Roboto', 'sans-serif']
             },
 
             "colors": {

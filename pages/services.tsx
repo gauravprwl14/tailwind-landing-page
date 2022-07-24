@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 
 
 const title = 'Personalized digital transformations'
-const description = 'Whether you need to build cloud-native software or migrate existing legacy systems to the cloud, we take your project from idea to launch.'
+const description = 'We take your project from idea to launch'
 
 
 const ServiceJSON = [
@@ -23,8 +23,11 @@ const ServiceJSON = [
         },
         id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
-        description: 'Build beautiful software that perfectly solves your business challenges',
-        ctaDescription: 'Let’s work together on your next software project',
+        description: 'Build beautiful software that perfectly solves your business challenges.',
+        cta: {
+            description: 'Let’s work together on your next software project',
+            style: ""
+        },
         pointers: [
             {
                 title: 'Beautiful cloud-native applications for mobile, web, and desktop',
@@ -50,10 +53,13 @@ const ServiceJSON = [
         id: 'Cloud-Migration',
         title: 'Cloud Migration',
         description: 'Move your legacy systems to the cloud and increase performance, reliability, availability, and scalability.',
-        ctaDescription: 'Let’s work together on your cloud migration',
+        cta: {
+            description: 'Let’s work together on your cloud migration',
+            style: ""
+        },
         pointers: [
             {
-                title: 'Move existing on-premise systems to the cloud (lift & shift )',
+                title: 'Move existing on-premise systems to the cloud (lift & shift)',
                 description: 'Keep your existing systems while taking advantage of the benefits of being in the cloud, often the quickest way to start a cloud migration.'
             },
             {
@@ -62,7 +68,7 @@ const ServiceJSON = [
             },
             {
                 title: 'Shift stand-alone workloads and functions to the cloud ',
-                description: 'Move workloads, event-drive functions, automation, and processes, both scheduled and non-scheduled, to the cloud'
+                description: 'Move workloads, event-drive functions, automation, and processes, both scheduled and non-scheduled, to the cloud.'
             }
         ]
     },
@@ -71,21 +77,24 @@ const ServiceJSON = [
         image: {
             src: '/img/cloud_operation.svg',
             position: 'left',
-            classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto lg:-mt-16'
+            classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto'
         },
         id: 'Cloud-Operations',
         title: 'Cloud Operations',
         classes: "",
-        description: 'Focus on your core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
-        ctaDescription: 'Let’s work together on your next software project',
+        description: 'Focus on core competencies and enjoy the peace of mind of letting us manage your cloud infrastructure.',
+        cta: {
+            description: 'Let us manage your cloud infrastructure',
+            style: ""
+        },
         pointers: [
             {
-                title: 'Fully managed hosting service on Microsoft Azure cloud, Heroku, AWS, or DigitalOcean.',
-                description: 'From Infrastructure design to  management (capacity, billing, security, compliance, data, etc.) , including operating systems, capacity planning and billing, as well as security, compliance and personal data protection. oud migration.'
+                title: 'Fully managed hosting service on Microsoft Azure',
+                description: 'We handle the day-to-day management of your cloud infrastructure including capacity management, security & compliance, cost optimization, data management & backups, and software updates.'
             },
             {
                 title: 'Systems architecture design and deployment',
-                description: 'We can design your complete cloud infrastructure, implementation and deployment, and if you’d like, we can then hand it off to you to manage yourself if you prefer.'
+                description: 'We design your cloud architecture and infrastructure, handle the implementation, and deliver a production-ready deployment for you to manage, or that we can manage for you.'
             }
         ]
     }
@@ -123,7 +132,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <CtaSection />
+                {/* <CtaSection /> */}
                 <KeyValues />
 
             </main>
