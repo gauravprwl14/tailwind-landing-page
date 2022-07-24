@@ -161,12 +161,12 @@
 }
 
 .service-page-cta-quote-left {
-    @apply before:absolute before:w-28 before:h-8 before:content-[""] before:bg-[url("/img/quotes.svg")] before:bg-no-repeat md:before:left-16 md:before:top-6 before:-top-10 before:left-0
+    @apply before:absolute before:w-32 before:h-10 before:content-[""] before:bg-[url("/img/quotes.svg")] before:bg-no-repeat md:before:left-12 md:before:top-6 before:-top-10 before:left-0
 }
 
 
 .service-page-cta-quote-right {
-    @apply after:absolute after:w-24  md:after:w-28 after:h-8 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:right-16 md:after:top-14 after:-right-4 after:-bottom-10
+    @apply after:absolute after:w-24  md:after:w-32 after:h-10 after:content-[""] after:bg-[url("/img/quotes.svg")] after:bg-center after:bg-no-repeat md:after:right-4 md:after:top-14 after:-right-4 after:-bottom-10
 }
 
 
@@ -202,6 +202,10 @@
         height: 741px;
     }
 
+    .leading-14 {
+        line-height: 3.5rem;
+    }
+
 
     .min-w-9 {
         min-width: 9.5rem;
@@ -225,6 +229,10 @@
 
     .tracking-wider-v1 {
         letter-spacing: 0.06em;
+    }
+
+    .tracking-tightest {
+        letter-spacing: -0.1rem;
     }
 
     .tracking-wider-v2 {

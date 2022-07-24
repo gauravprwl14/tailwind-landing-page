@@ -17,9 +17,9 @@ console.log('%c WOW ', 'background: lime; color: black', { WOW });
 const CTASection = ({ text }: { text: String }) => {
     return (
         <div className='bg-electricGreen flex w-full items-center justify-center'>
-            <div className='section-container h-56 border-t relative'>
+            <div className='section-container h-56 border-t relative !pt-11'>
                 <div className='service-page-cta-quote-left service-page-cta-quote-right'>
-                    <div className='text-white font-GloriaHallelujah text-4xl'> {text}</div>
+                    <div className='text-white font-GloriaHallelujah text-5xl leading-12 tracking-tightest'> {text}</div>
                 </div>
                 <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray hover:bg-gray-200 rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
             </div>
