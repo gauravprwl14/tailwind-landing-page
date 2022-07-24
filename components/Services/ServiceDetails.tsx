@@ -30,8 +30,8 @@ const CTASection = ({ text }: { text: String }) => {
 
 const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: string }) => {
     return (
-        <div className={`flex w-[60%] md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position)}`}>
-            <div className={`w-full h-full flex items-center justify-center ${obj.classes} bg-contain bg-center bg-no-repeat ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
+        <div className={`w-full h-full md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position)}`}>
+            <div className={`w-full h-full flex items-center justify-center bg-contain bg-center bg-no-repeat ${obj.classes}  ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
             </div>
         </div>
     )
@@ -43,7 +43,7 @@ const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: st
 
 const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     return (
-        <div className='flex my-4'>
+        <div className='flex mt-8 mb-8'>
             <ul className='text-left '>
                 {
                     lists.map((list, index) => {
@@ -115,20 +115,34 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                     return (
                         <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
                             <div className='section-container px-12 '>
-                                <div className='flex flex-col flex-1 lg:flex-row min-h-[642px]'>
-
-                                    {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} position='right' />}
+                                <div className='grid grid-cols-12 lg:flex-row min-h-[642px]'>
 
 
-                                    <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
-                                        <div className='w-full'>
-                                            <div className='service-title mb-5'>{serviceObj.title}</div>
-                                            <div className='text-medium' >{serviceObj.description}</div>
-                                            <BulletList lists={serviceObj.pointers} />
+                                    {serviceObj.image.position === 'left' && (
+                                        <div className='col-span-4'>
+                                            <ImageContainer obj={serviceObj.image} position='right' />
+                                        </div>
+                                    )
+                                    }
+
+
+                                    <div className='col-span-8  ml-16'>
+                                        <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
+                                            <div className='w-full'>
+                                                <div className='service-title mb-5'>{serviceObj.title}</div>
+                                                <div className='text-medium' >{serviceObj.description}</div>
+                                                <BulletList lists={serviceObj.pointers} />
+                                            </div>
                                         </div>
                                     </div>
+                                    {serviceObj.image.position === 'right' && (
+                                        <div className='col-span-4'>
+                                            <ImageContainer obj={serviceObj.image} position='left' />
+                                        </div>
+                                    )
+                                    }
                                 </div>
-                                {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} position='left' />}
+
                             </div>
 
                             <div className={`flex w-full  wow animate__animated animate__fadeInLeft ${alignSection(serviceObj.image.position)}`}>

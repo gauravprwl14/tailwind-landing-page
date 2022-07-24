@@ -85,7 +85,7 @@
 }
 
 .text-extra-bold {
-    @apply font-Poppins font-extrabold text-xl text-charcoal tracking-normal;
+    @apply font-Poppins font-extrabold text-xl text-charcoal tracking-normal leading-8;
 }
 
 
