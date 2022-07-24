@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-import CtaSection from '../Home/CtaSection'
 import Button from '../button'
 import { ServiceType, ServicePointersType, ServiceImageType } from '../../types/commonTypes'
 type ImageContainerPropTypes = {
@@ -15,14 +14,31 @@ const WOW = !isServer ? require('wowjs') : null
 console.log('%c WOW ', 'background: lime; color: black', { WOW });
 
 
+const CTASection = ({ text }: { text: String }) => {
+    return (
+        <div className='bg-electricGreen flex w-full items-center justify-center'>
+            <div className='section-container h-56 border-t relative'>
+                <div className='service-page-cta-quote-left service-page-cta-quote-right'>
+                    <div className='text-white font-GloriaHallelujah text-4xl'> {text}</div>
+                </div>
+                <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray hover:bg-gray-200 rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
+            </div>
+        </div>
+    )
+}
+
+
 const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: string }) => {
     return (
-        <div className={`flex flex-1 md:pr-4 mb-4 md:mb-0 wow animate__animated ${animationClass(position)}`}>
+        <div className={`flex w-[60%] md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position)}`}>
             <div className={`w-full h-full flex items-center justify-center ${obj.classes} bg-contain bg-center bg-no-repeat ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
             </div>
         </div>
     )
 }
+
+
+
 
 
 const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
@@ -32,11 +48,11 @@ const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
                 {
                     lists.map((list, index) => {
                         return (
-                            <li key={index} className="list-disc mt-5">
+                            <li key={index} className="list-disc mt-3">
                                 <div className='text-extra-bold'>{list.title}</div>
-                                <div className='mt-2 text-medium'>
+                                <p className='mt-2 text-medium'>
                                     {list.description}
-                                </div>
+                                </p>
                             </li>
                         )
 
@@ -79,6 +95,8 @@ const animationClass = (position: string) => {
     }
 }
 
+
+
 const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
@@ -95,29 +113,33 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                 arr.map((serviceObj, index) => {
                     return (
-                        <div className={`w-full ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
-                            <div className='section-container'>
-                                <div className='flex flex-col lg:flex-row'>
+                        <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"}>
+                            <div className='section-container px-12 '>
+                                <div className='flex flex-col flex-1 lg:flex-row min-h-[642px]'>
 
                                     {serviceObj.image.position === 'left' && <ImageContainer obj={serviceObj.image} position='right' />}
-                                    <div className={`flex flex-col flex-1 text-left pl-4 wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
-                                        <div className='service-title mb-5'>{serviceObj.title}</div>
-                                        <div className='text-medium' >{serviceObj.description}</div>
-                                        <BulletList lists={serviceObj.pointers} />
-                                    </div>
-                                    {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} position='left' />}
 
+
+                                    <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
+                                        <div className='w-full'>
+                                            <div className='service-title mb-5'>{serviceObj.title}</div>
+                                            <div className='text-medium' >{serviceObj.description}</div>
+                                            <BulletList lists={serviceObj.pointers} />
+                                        </div>
+                                    </div>
                                 </div>
+                                {serviceObj.image.position === 'right' && <ImageContainer obj={serviceObj.image} position='left' />}
                             </div>
 
                             <div className={`flex w-full  wow animate__animated animate__fadeInLeft ${alignSection(serviceObj.image.position)}`}>
                                 {/* <div className="lg:basis-1/2">
                                     <WorkTogetherSection description={serviceObj.ctaDescription} />
                                 </div> */}
-                                <CtaSection />
+                                <CTASection text={serviceObj.ctaDescription} />
                             </div>
 
                         </div>
+
                     )
                 })
 

@@ -11,7 +11,7 @@ import Footer from '../components/Footer'
 
 
 const title = 'Personalized digital transformations'
-const description = 'Whether you need to build cloud-native software or migrate existing legacy systems to the cloud, we take your project from idea to launch.'
+const description = 'We take your project from idea to launch'
 
 
 const ServiceJSON = [
@@ -23,7 +23,7 @@ const ServiceJSON = [
         },
         id: 'Cloud-Native-Software',
         title: 'Cloud-Native Software',
-        description: 'Build beautiful software that perfectly solves your business challenges',
+        description: 'Build beautiful software that perfectly solves your business challenges.',
         ctaDescription: 'Let’s work together on your next software project',
         pointers: [
             {
@@ -123,7 +123,7 @@ const Services = () => {
 
             <main className='page-container'>
                 <ServiceDetails arr={ServiceJSON} />
-                <CtaSection />
+                {/* <CtaSection /> */}
                 <KeyValues />
 
             </main>

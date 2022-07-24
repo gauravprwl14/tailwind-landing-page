@@ -81,11 +81,11 @@
 }
 
 .text-medium {
-    @apply font-Poppins font-medium text-base text-charcoal;
+    @apply font-Poppins font-medium text-xl text-charcoal leading-8 tracking-wider;
 }
 
 .text-extra-bold {
-    @apply font-Poppins font-extrabold text-base text-charcoal;
+    @apply font-Poppins font-extrabold text-xl text-charcoal tracking-normal;
 }
 
 
