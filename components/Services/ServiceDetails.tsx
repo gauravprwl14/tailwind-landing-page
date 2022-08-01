@@ -44,13 +44,13 @@ const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: st
 const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     return (
         <div className='flex mt-8 mb-8'>
-            <ul className='text-left '>
+            <ul className='text-left'>
                 {
                     lists.map((list, index) => {
                         return (
-                            <li key={index} className="list-disc mt-3">
-                                <div className='text-extra-bold'>{list.title}</div>
-                                <p className='mt-2 text-medium'>
+                            <li key={index} className="list-disc mt-4">
+                                <div className='card-description !text-lg !mb-4'>{list.title}</div>
+                                <p className='bullet-point-text'>
                                     {list.description}
                                 </p>
                             </li>
@@ -115,7 +115,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                     return (
                         <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"} key={index}>
                             <div className='section-container px-12 '>
-                                <div className={`grid grid-cols-12 lg:flex-row ${index === 2 ? 'min-h-[542px]' : 'min-h-[642px]'}`}>
+                                <div className={`grid grid-cols-12 lg:flex-row ${index === 2 ? 'min-h-[482px]' : 'min-h-[520px]'}`}>
 
 
                                     {serviceObj.image.position === 'left' && (
@@ -128,9 +128,10 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                                     <div className='col-span-8  ml-16'>
                                         <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
-                                            <div className='w-full'>
-                                                <div className='service-title mb-5'>{serviceObj.title}</div>
-                                                <div className='text-medium' >{serviceObj.description}</div>
+                                            {/* only in case of 1st section give some margin top */}
+                                            <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
+                                                <div className='card-title mb-3'>{serviceObj.title}</div>
+                                                <div className='card-description' >{serviceObj.description}</div>
                                                 <BulletList lists={serviceObj.pointers} />
                                             </div>
                                         </div>
@@ -145,7 +146,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                             </div>
 
-                            <div className={`flex w-full  wow animate__animated animate__fadeInLeft ${alignSection(serviceObj.image.position)}`}>
+                            <div className={`flex w-full  ${alignSection(serviceObj.image.position)}`}>
                                 {/* <div className="lg:basis-1/2">
                                     <WorkTogetherSection description={serviceObj.ctaDescription} />
                                 </div> */}
