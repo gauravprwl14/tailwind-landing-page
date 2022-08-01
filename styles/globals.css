@@ -239,14 +239,14 @@
         letter-spacing: 0.2em;
     }
     .about-title {
-        @apply font-Comfortaa font-bold text-4xl -tracking-wider;
+        @apply font-Comfortaa font-bold md:text-4xl text-xl -tracking-wider;
     }
     .about-description {
         @apply font-Poppins font-normal py-3 tracking-wider-v1 text-base;
         
     }
     .about-bullet-pointer-container {
-        @apply pt-1 w-12 mr-3;
+        @apply pt-1 md:w-12 w-8 mr-3;
     }
   }
 
@@ -316,7 +316,7 @@
     @apply text-black text-4xl font-normal font-Comfortaa leading-10 tracking-tight
   }
   .about-us-description {
-    @apply text-eerieBlack text-xl font-normal font-Poppins md:px-14 px-4 py-6 pb-16 text-center;
+    @apply text-eerieBlack text-xl font-normal font-Poppins md:px-14 px-4 py-6 md:pb-16 text-center;
   }
 
 

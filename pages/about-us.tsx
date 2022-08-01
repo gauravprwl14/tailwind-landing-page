@@ -24,7 +24,7 @@ const AboutUs: NextPage = () => {
                     description={description}
                     bgContainer="bg-bottom"
                     headerContainer="mt-3 leading-5"
-                    titleStyle="!custom-text-large mb-2"
+                    titleStyle="!md:custom-text-large mb-2"
                 />
             </div>
 
