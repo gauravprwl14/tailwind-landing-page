@@ -313,10 +313,10 @@
 
 
   .about-us-title {
-    @apply text-eerieBlack text-4xl font-medium font-Comfortaa leading-10 tracking-tight
+    @apply text-black text-4xl font-normal font-Comfortaa leading-10 tracking-tight
   }
   .about-us-description {
-    @apply text-eerieBlack text-lg font-medium font-Poppins md:px-20 px-4 py-6 pb-16;
+    @apply text-eerieBlack text-xl font-normal font-Poppins md:px-14 px-4 py-6 pb-16 text-center;
   }
 
 

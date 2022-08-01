@@ -127,6 +127,7 @@ const Services = () => {
                     description={description}
                     bgContainer="bg-bottom"
                     headerContainer="mt-3"
+                    titleStyle="mb-2"
                 />
             </div>
 
