@@ -195,7 +195,7 @@ const Content = () => {
                         const alignLeft = index % 2 === 0
 
                         return (
-                            <div className={`flex ${alignLeft ? 'justify-start' : 'justify-end'}`}>
+                            <div className={`flex mb-16 ${alignLeft ? 'justify-start' : 'justify-end'}`}>
                                 <div className='w-1/2'>
                                     <ExpertiseSection obj={obj} key={index} />
                                 </div>
