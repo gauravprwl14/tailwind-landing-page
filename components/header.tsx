@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from "next/router";
 import { ROUTES } from '../utility/routes'
 
 type HeaderType = {
@@ -13,13 +14,29 @@ type HeaderType = {
 
 
 const Header = () => {
+    const router = useRouter();
+    const isActive = (path: string) => {
+        console.log('%c router.pathname ', 'background: lime; color: black', router.pathname);
+        if (router.pathname === path) {
+            return 'text-electricGreen'
+        }
+        if (router.pathname === path) {
+            return 'text-electricGreen'
+        }
+        if (router.pathname === path) {
+            return 'text-electricGreen'
+        }
+        return ''
+    }
+
+
     return (
         <div className='relative my-6 mx-16'>
             <div className=" flex flex-1 justify-center">
                 <div className="space-x-6 max-w-screen-xl -ml-4 py-4">
-                    <a href={ROUTES.home} className="text-white hover:text-electricGreen">Home</a>
-                    <a href={ROUTES.services} className="text-white hover:text-electricGreen">What we do</a>
-                    <a href={ROUTES.aboutUs} className="text-white hover:text-electricGreen">About Us</a>
+                    <a href={ROUTES.home} className={`text-white hover:text-electricGreen ${isActive(ROUTES.home)}`}>Home</a>
+                    <a href={ROUTES.services} className={`text-white hover:text-electricGreen ${isActive(ROUTES.services)}`}>What we</a>
+                    <a href={ROUTES.aboutUs} className={`text-white hover:text-electricGreen ${isActive(ROUTES.aboutUs)}`}>About Us</a>
                 </div>
             </div>
             <div className='absolute top-0 right-0'>
