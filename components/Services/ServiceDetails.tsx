@@ -17,9 +17,9 @@ console.log('%c WOW ', 'background: lime; color: black', { WOW });
 const CTASection = ({ description, style }: { description: String; style: String; }) => {
     return (
         <div className='bg-electricGreen flex w-full items-center justify-center'>
-            <div className='section-container h-56 border-t relative !pt-11'>
+            <div className='section-container md:h-56 h-48 border-t relative !pt-11'>
                 <div className='service-page-cta-quote-left service-page-cta-quote-right'>
-                    <div className={`text-white font-GloriaHallelujah text-5xl leading-12 tracking-tightest ${style}`}> {description}</div>
+                    <div className={`text-white font-GloriaHallelujah md:text-5xl text-2xl leading-12 tracking-tightest ${style}`}> {description}</div>
                 </div>
                 <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray hover:bg-gray-200 rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
             </div>
@@ -119,14 +119,14 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
 
                                     {serviceObj.image.position === 'left' && (
-                                        <div className='col-span-4'>
+                                        <div className='md:col-span-4 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='right' />
                                         </div>
                                     )
                                     }
 
 
-                                    <div className='col-span-8  ml-16'>
+                                    <div className='md:col-span-8  md:ml-16 col-span-12'>
                                         <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
@@ -137,7 +137,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                         </div>
                                     </div>
                                     {serviceObj.image.position === 'right' && (
-                                        <div className='col-span-4'>
+                                        <div className='md:col-span-4 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='left' />
                                         </div>
                                     )

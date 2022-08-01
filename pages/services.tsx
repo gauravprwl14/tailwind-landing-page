@@ -77,7 +77,7 @@ const ServiceJSON = [
         image: {
             src: '/img/cloud_operation.svg',
             position: 'left',
-            classes: 'items-baseline cloud-operation-img-container !bg-top !bg-auto'
+            classes: 'items-baseline cloud-operation-img-container !bg-top md:!bg-auto'
         },
         id: 'Cloud-Operations',
         title: 'Cloud Operations',
