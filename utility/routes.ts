@@ -1,7 +1,5 @@
 
-
-console.log('%c process env ', 'background: lime; color: black', { env: process.env });
-console.log('%c process env production', 'background: lime; color: black', { env: process.env.production });
+import { __DEV__ } from './helper'
 
 export let ROUTES = {
     'home': '/',
@@ -9,7 +7,7 @@ export let ROUTES = {
     'services': '/services.html'
 }
 
-if (process.env.NODE_ENV === 'development') {
+if (__DEV__) {
     ROUTES = {
         'home': '/',
         'aboutUs': '/about-us',

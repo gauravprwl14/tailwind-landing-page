@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRouter } from "next/router";
 import { ROUTES } from '../utility/routes'
+import { __DEV__, trimExtension } from '../utility/helper'
 
 type HeaderType = {
     title: string;
@@ -16,14 +17,14 @@ type HeaderType = {
 const Header = () => {
     const router = useRouter();
     const isActive = (path: string) => {
-        console.log('%c router.pathname ', 'background: lime; color: black', router.pathname);
-        if (router.pathname === path) {
+        console.log('%c router.pathname ', 'background: lime; color: black', { route: router.pathname, path: trimExtension(path) });
+        if (router.pathname === trimExtension(path)) {
             return 'text-electricGreen'
         }
-        if (router.pathname === path) {
+        if (router.pathname === trimExtension(path)) {
             return 'text-electricGreen'
         }
-        if (router.pathname === path) {
+        if (router.pathname === trimExtension(path)) {
             return 'text-electricGreen'
         }
         return ''
