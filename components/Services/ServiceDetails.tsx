@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
-import Image from 'next/image'
+import CTASection from '../Home/CtaSection'
+
 import Button from '../button'
 import { ServiceType, ServicePointersType, ServiceImageType } from '../../types/commonTypes'
 type ImageContainerPropTypes = {
@@ -11,21 +12,6 @@ const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
 
-console.log('%c WOW ', 'background: lime; color: black', { WOW });
-
-
-const CTASection = ({ description, style }: { description: String; style: String; }) => {
-    return (
-        <div className='bg-electricGreen flex w-full items-center justify-center'>
-            <div className='section-container md:h-56 h-48 border-t relative !pt-11'>
-                <div className='service-page-cta-quote-left service-page-cta-quote-right'>
-                    <div className={`text-white font-GloriaHallelujah md:text-5xl text-2xl leading-12 tracking-tightest ${style}`}> {description}</div>
-                </div>
-                <div><button className='mt-10 p-3 px-6 pt-2 border-4 border-black bg-veryLightGray hover:bg-gray-200 rounded-lg baseline font-Poppins font-medium'> Get in touch</button></div>
-            </div>
-        </div>
-    )
-}
 
 
 const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: string }) => {
@@ -150,7 +136,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                 {/* <div className="lg:basis-1/2">
                                     <WorkTogetherSection description={serviceObj.ctaDescription} />
                                 </div> */}
-                                <CTASection description={serviceObj.cta.description} style={serviceObj.cta.style} />
+                                <CTASection text={serviceObj.cta.description} />
                             </div>
 
                         </div>
