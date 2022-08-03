@@ -39,7 +39,7 @@
 }
 
 .card-description {
-    @apply font-Poppins font-medium text-base text-charcoal mb-8
+    @apply font-Poppins font-medium text-base text-charcoal
 }
 
 .bullet-point-text {

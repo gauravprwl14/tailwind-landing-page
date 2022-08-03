@@ -29,7 +29,7 @@ const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: st
 
 const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     return (
-        <div className='flex mt-8 mb-8'>
+        <div className='flex ml-4 mt-1'>
             <ul className='text-left'>
                 {
                     lists.map((list, index) => {
@@ -116,9 +116,11 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                         <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
-                                                <div className='card-title mb-3'>{serviceObj.title}</div>
+                                                <div className='card-title'>{serviceObj.title}</div>
                                                 <div className='card-description' >{serviceObj.description}</div>
-                                                <BulletList lists={serviceObj.pointers} />
+                                                <div className='mx-4'>
+                                                    <BulletList lists={serviceObj.pointers} />
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -133,9 +135,6 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                             </div>
 
                             <div className={`flex w-full  ${alignSection(serviceObj.image.position)}`}>
-                                {/* <div className="lg:basis-1/2">
-                                    <WorkTogetherSection description={serviceObj.ctaDescription} />
-                                </div> */}
                                 <CTASection text={serviceObj.cta.description} />
                             </div>
 
