@@ -34,9 +34,9 @@ const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
                 {
                     lists.map((list, index) => {
                         return (
-                            <li key={index} className="list-disc mt-4">
-                                <div className='card-description !text-lg !mb-4'>{list.title}</div>
-                                <p className='bullet-point-text'>
+                            <li key={index} className="list-disc mt-3">
+                                <div className='card-description !mb-2'>{list.title}</div>
+                                <p className='bullet-point-text !font-normal'>
                                     {list.description}
                                 </p>
                             </li>
@@ -101,7 +101,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                     return (
                         <div className={`flex w-full items-center justify-center flex-col ${serviceObj.classes}`} id={serviceObj.id || "random_id"} key={index}>
                             <div className='section-container px-12 '>
-                                <div className={`grid grid-cols-12 lg:flex-row ${index === 2 ? 'min-h-[482px]' : 'min-h-[520px]'}`}>
+                                <div className={`grid grid-cols-12 lg:flex-row ${index === 2 ? 'min-h-[382px]' : 'min-h-[420px]'}`}>
 
 
                                     {serviceObj.image.position === 'left' && (
@@ -117,8 +117,8 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
                                                 <div className='card-title'>{serviceObj.title}</div>
-                                                <div className='card-description' >{serviceObj.description}</div>
-                                                <div className='mx-4'>
+                                                <div className='card-description !-mb-0' >{serviceObj.description}</div>
+                                                <div className='mx-2'>
                                                     <BulletList lists={serviceObj.pointers} />
                                                 </div>
                                             </div>
