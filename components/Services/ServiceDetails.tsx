@@ -105,14 +105,14 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
 
                                     {serviceObj.image.position === 'left' && (
-                                        <div className='md:col-span-4 col-span-12 min-h-[266px]'>
+                                        <div className='md:col-span-5 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='right' />
                                         </div>
                                     )
                                     }
 
 
-                                    <div className='md:col-span-8  md:ml-16 col-span-12'>
+                                    <div className='md:col-span-7  md:ml-16 col-span-12'>
                                         <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
@@ -125,7 +125,7 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                         </div>
                                     </div>
                                     {serviceObj.image.position === 'right' && (
-                                        <div className='md:col-span-4 col-span-12 min-h-[266px]'>
+                                        <div className='md:col-span-5 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='left' />
                                         </div>
                                     )
