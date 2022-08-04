@@ -44,8 +44,8 @@ const BulletPoint = ({ pointers }: BulletPointPropTypes) => {
                             <img className='max-w-48 w-full' src="img/bullet_point.svg" />
                         </div>
                         <div>
-                            <div className='bullet-point-style-02-text pl-3 '>{pointer.title}</div>
-                            <div className='bullet-point-style-02-description pl-3 mt-2'>{pointer.description}</div>
+                            <div className='card-description pl-3 !mb-0 '>{pointer.title}</div>
+                            <div className='bullet-point-text !font-normal pl-3 mt-2'>{pointer.description}</div>
                         </div>
                     </div>
                 )
@@ -62,7 +62,8 @@ const KeyValues = () => {
             <div className='section-container'>
                 <div className='text-left'>
                     <div className='h1 pb-3'> Our JUMP™ System </div>
-                    <div className='bullet-point-text pt-3'> Built on decades of successfully launching digital transformations projects, we developed JUMP™, our exclusive process-based system for successfully building and launching digital transformations.
+                    <div className='card-description !-mb-0 pt-3'>
+                        Built on decades of successfully launching digital transformations projects, we developed JUMP™, our exclusive process-based system for successfully building and launching digital transformations.
                         <br />
                         <br />
                         Each stage in the JUMP™ journey has a defined destination with a clear set of deliverables that provide immediate value.
