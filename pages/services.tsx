@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../components/header'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
@@ -8,6 +8,9 @@ import KeyValues from '../components/Services/KeyValues'
 import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
 import { isMobile } from '../utility/helper'
+
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wowjs') : null
 
 // const ServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
 //     ssr: false,
@@ -117,6 +120,11 @@ const TestimonialJSON = {
 
 
 const Services = ({ mobileDevice }: any) => {
+    useEffect(() => {
+        new WOW.WOW({
+        }).init();
+
+    })
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-center">
@@ -138,6 +146,15 @@ const Services = ({ mobileDevice }: any) => {
 
             <main className='page-container'>
 
+                {
+                    <div> check animation
+
+                        {
+                            mobileDevice ? <div className='wow animate__animated animate__fadeIn'> rendering mobile view </div>
+                                : <div className='wow animate__animated animate__fadeInLeft'> rendering web view </div>
+                        }
+                    </div>
+                }
 
                 <ServiceDetails
                     arr={ServiceJSON}
