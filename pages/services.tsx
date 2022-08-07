@@ -1,13 +1,16 @@
 import React from 'react'
 import Header from '../components/header'
 import Head from 'next/head'
-import ServiceDetails from '../components/Services/ServiceDetails'
+import dynamic from 'next/dynamic'
+// import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
 import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
 
-
+const DynamicServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
+    ssr: false,
+})
 
 
 const title = 'Personalized digital transformations'
@@ -132,7 +135,7 @@ const Services = () => {
             </div>
 
             <main className='page-container'>
-                <ServiceDetails arr={ServiceJSON} />
+                <DynamicServiceDetails arr={ServiceJSON} />
                 {/* <CtaSection /> */}
                 <KeyValues />
 

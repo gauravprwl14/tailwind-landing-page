@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import CTASection from '../Home/CtaSection'
-
+import { isMobile } from '../../utility/helper'
 import Button from '../button'
 import { ServiceType, ServicePointersType, ServiceImageType } from '../../types/commonTypes'
 type ImageContainerPropTypes = {
@@ -62,6 +62,9 @@ const alignSection = (position: string) => {
 }
 
 const animationClass = (position: string) => {
+    if (isMobile(null)) {
+        return ""
+    }
     if (position === 'left') {
         return 'animate__fadeInLeft'
     }
