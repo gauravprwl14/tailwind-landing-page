@@ -16,7 +16,7 @@ export const CtaSection = ({ text = defaultText }: CTASectionProps) => {
 
     return (
         <div className='bg-electricGreen flex w-full items-center justify-center'>
-            <div className='section-container h-64 border-t'>
+            <div className='section-container md:h-64 min-h-64 md:border-t'>
                 <div className='relative'>
                     {/* <div className="absolute -left-32 ">
                         <Image src="/img/quotes.svg" alt="Quotes" width="100%" height="30%" />
