@@ -141,20 +141,9 @@ const Services = ({ mobileDevice }: any) => {
 
             <main className='page-container'>
 
-                {
-                    <div> check animation
-
-                        {
-                            mobileDevice ? <div className='wow animate__animated animate__fadeIn'> rendering mobile view </div>
-                                : <div className='wow animate__animated animate__fadeInLeft'> rendering web view </div>
-                        }
-                    </div>
-                }
 
                 <ServiceDetails
                     arr={ServiceJSON}
-
-
                 />
                 {/* <CtaSection /> */}
                 <KeyValues />
