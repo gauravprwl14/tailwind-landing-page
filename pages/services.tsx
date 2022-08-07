@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Header from '../components/header'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-import ServiceDetails from '../components/Services/ServiceDetails'
+// import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
 import CtaSection from '../components/Home/CtaSection'
@@ -12,9 +12,9 @@ import { isMobile } from '../utility/helper'
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wowjs') : null
 
-// const ServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
-//     ssr: false,
-// })
+const ServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
+    ssr: false,
+})
 
 
 const title = 'Personalized digital transformations'
