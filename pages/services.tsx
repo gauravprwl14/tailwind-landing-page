@@ -2,15 +2,16 @@ import React from 'react'
 import Header from '../components/header'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
-// import ServiceDetails from '../components/Services/ServiceDetails'
+import ServiceDetails from '../components/Services/ServiceDetails'
 import Testimonial from '../components/Home/Testimonial'
 import KeyValues from '../components/Services/KeyValues'
 import CtaSection from '../components/Home/CtaSection'
 import Footer from '../components/Footer'
+import { isMobile } from '../utility/helper'
 
-const DynamicServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
-    ssr: false,
-})
+// const ServiceDetails = dynamic(() => import('../components/Services/ServiceDetails'), {
+//     ssr: false,
+// })
 
 
 const title = 'Personalized digital transformations'
@@ -115,7 +116,8 @@ const TestimonialJSON = {
 
 
 
-const Services = () => {
+const Services = ({ mobileDevice }: any) => {
+
     return (
         <div className="flex min-h-screen flex-col items-center justify-center">
             <Head>
@@ -135,7 +137,13 @@ const Services = () => {
             </div>
 
             <main className='page-container'>
-                <DynamicServiceDetails arr={ServiceJSON} />
+
+
+                <ServiceDetails
+                    arr={ServiceJSON}
+                    isMobile={mobileDevice}
+
+                />
                 {/* <CtaSection /> */}
                 <KeyValues />
 
@@ -143,6 +151,17 @@ const Services = () => {
             <Footer />
         </div>
     )
+}
+
+
+Services.getInitialProps = ({ req }: any) => {
+    const mobileDevice = isMobile({ ua: req })
+
+
+    return {
+
+        mobileDevice
+    }
 }
 
 

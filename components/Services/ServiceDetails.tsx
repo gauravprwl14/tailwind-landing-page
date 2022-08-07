@@ -14,9 +14,9 @@ const WOW = !isServer ? require('wowjs') : null
 
 
 
-const ImageContainer = ({ obj, position }: { obj: ServiceImageType, position: string }) => {
+const ImageContainer = ({ obj, position, isMobile }: { obj: ServiceImageType, position: string, isMobile: boolean }) => {
     return (
-        <div className={`w-full h-full md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position)}`}>
+        <div className={`w-full h-full md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position, isMobile)}`}>
             <div className={`w-full h-full flex items-center justify-center bg-contain bg-center bg-no-repeat ${obj.classes}  ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
             </div>
         </div>
@@ -61,9 +61,9 @@ const alignSection = (position: string) => {
     }
 }
 
-const animationClass = (position: string) => {
-    if (isMobile(null)) {
-        return ""
+const animationClass = (position: string, isMobile: boolean) => {
+    if (isMobile) {
+        return "animate__fadeIn"
     }
     if (position === 'left') {
         return 'animate__fadeInLeft'
@@ -75,7 +75,7 @@ const animationClass = (position: string) => {
 
 
 
-const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
+const ServiceDetails = ({ arr, isMobile }: { arr: ServiceType[], isMobile: boolean }) => {
     // const obj = ServiceJSON[0]
 
     useEffect(() => {
@@ -98,14 +98,16 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
 
                                     {serviceObj.image.position === 'left' && (
                                         <div className='md:col-span-5 col-span-12 min-h-[266px]'>
-                                            <ImageContainer obj={serviceObj.image} position='right' />
+                                            <ImageContainer obj={serviceObj.image} position='right'
+                                                isMobile={isMobile}
+                                            />
                                         </div>
                                     )
                                     }
 
 
                                     <div className='md:col-span-7  md:ml-16 col-span-12'>
-                                        <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position)}`}>
+                                        <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position, isMobile)}`}>
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
                                                 <div className='card-title'>{serviceObj.title}</div>
@@ -118,7 +120,9 @@ const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
                                     </div>
                                     {serviceObj.image.position === 'right' && (
                                         <div className='md:col-span-5 col-span-12 min-h-[266px]'>
-                                            <ImageContainer obj={serviceObj.image} position='left' />
+                                            <ImageContainer obj={serviceObj.image} position='left'
+                                                isMobile={isMobile}
+                                            />
                                         </div>
                                     )
                                     }
