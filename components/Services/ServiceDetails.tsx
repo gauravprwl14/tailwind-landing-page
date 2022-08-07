@@ -49,17 +49,6 @@ const BulletList = ({ lists }: { lists: ServicePointersType[] }) => {
     )
 }
 
-const WorkTogetherSection = ({ description }: { description: String }) => {
-    return (
-        <div className='flex flex-col justify-center items-center'>
-            <div className='cta-description-title text-center my-4 pb-2'>
-                {description}
-            </div>
-            <Button text="Get in touch" />
-        </div>
-    )
-}
-
 
 
 

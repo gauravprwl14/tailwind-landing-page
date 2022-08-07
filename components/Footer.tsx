@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ROUTES } from '../utility/routes'
+import { handleGetInTouch } from '../utility/helper'
 
 const NavigationLinks = () => {
     return (
@@ -17,8 +18,9 @@ const ActionButton = () => {
         <div className='flex justify-center lg:justify-end items-center'>
             <button
                 className='footer-action-btn-container hover:bg-electricGreen300'
+                onClick={handleGetInTouch}
             >
-                Get in touch
+                Get in Touch
             </button>
         </div>
     )
