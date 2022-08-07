@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CTASection from '../Home/CtaSection'
 import { isMobile } from '../../utility/helper'
 import Button from '../button'
@@ -8,15 +8,14 @@ type ImageContainerPropTypes = {
 }
 
 
-const isServer = typeof window === 'undefined'
-const WOW = !isServer ? require('wowjs') : null
 
 
 
 
-const ImageContainer = ({ obj, position, isMobile }: { obj: ServiceImageType, position: string, isMobile: boolean }) => {
+
+const ImageContainer = ({ obj, position, isMobile, isAnimationActive }: { obj: ServiceImageType, position: string, isMobile: boolean, isAnimationActive: boolean }) => {
     return (
-        <div className={`w-full h-full md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position, isMobile)}`}>
+        <div className={`w-full h-full md:mr-16 mb-4 md:mb-0 wow animate__animated ${animationClass(position, isMobile, isAnimationActive)}`}>
             <div className={`w-full h-full flex items-center justify-center bg-contain bg-center bg-no-repeat ${obj.classes}  ")]`} style={{ backgroundImage: `url(${obj.src})` }}>
             </div>
         </div>
@@ -61,28 +60,40 @@ const alignSection = (position: string) => {
     }
 }
 
-const animationClass = (position: string, isMobile: boolean) => {
+const animationClass = (position: string, isMobile: boolean, active = false) => {
+    if (!active) {
+        return ''
+    }
+
     if (isMobile) {
         return "animate__fadeIn"
     }
     if (position === 'left') {
-        return 'animate__fadeInLeft'
+        return 'custom__animate__fadeInLeft'
     }
     if (position === 'right') {
-        return 'animate__fadeInRight'
+        return 'custom__animate__fadeInRight'
     }
 }
 
 
 
-const ServiceDetails = ({ arr, isMobile }: { arr: ServiceType[], isMobile: boolean }) => {
+const ServiceDetails = ({ arr }: { arr: ServiceType[] }) => {
     // const obj = ServiceJSON[0]
 
-    useEffect(() => {
-        new WOW.WOW({
-        }).init();
+    const [isAnimationActive, setAnimation] = useState(false)
 
-    })
+
+
+    const mobileDevice = isMobile(null)
+
+    useEffect(() => {
+
+        setAnimation(true)
+
+    }, [mobileDevice])
+
+
 
     return (
         <>
@@ -99,7 +110,8 @@ const ServiceDetails = ({ arr, isMobile }: { arr: ServiceType[], isMobile: boole
                                     {serviceObj.image.position === 'left' && (
                                         <div className='md:col-span-5 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='right'
-                                                isMobile={isMobile}
+                                                isMobile={mobileDevice}
+                                                isAnimationActive={isAnimationActive}
                                             />
                                         </div>
                                     )
@@ -107,7 +119,7 @@ const ServiceDetails = ({ arr, isMobile }: { arr: ServiceType[], isMobile: boole
 
 
                                     <div className='md:col-span-7  md:ml-16 col-span-12'>
-                                        <div className={`flex flex-col  text-left pl-4  wow animate__animated  ${animationClass(serviceObj.image.position, isMobile)}`}>
+                                        <div className={`flex flex-col  text-left pl-4 wow animate__animated ${animationClass(serviceObj.image.position, mobileDevice, isAnimationActive)}`}>
                                             {/* only in case of 1st section give some margin top */}
                                             <div className={`w-full ${index === 0 ? 'mt-4' : ''}`}>
                                                 <div className='card-title'>{serviceObj.title}</div>
@@ -121,7 +133,8 @@ const ServiceDetails = ({ arr, isMobile }: { arr: ServiceType[], isMobile: boole
                                     {serviceObj.image.position === 'right' && (
                                         <div className='md:col-span-5 col-span-12 min-h-[266px]'>
                                             <ImageContainer obj={serviceObj.image} position='left'
-                                                isMobile={isMobile}
+                                                isMobile={mobileDevice}
+                                                isAnimationActive={isAnimationActive}
                                             />
                                         </div>
                                     )

@@ -355,11 +355,11 @@
 
 
 
-  .animate__fadeInRight {
+  .custom__animate__fadeInRight {
     -webkit-animation-name: custom-fadeInRight;
     animation-name: custom-fadeInRight;
   }
-  .animate__fadeInLeft {
+  .custom__animate__fadeInLeft {
     -webkit-animation-name: custom-fadeInLeft;
     animation-name: custom-fadeInLeft;
   }
