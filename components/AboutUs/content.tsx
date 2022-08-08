@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const headerContent = "An elite team of senior digital transformation leaders"
-const description = "We are a boutique firm laser-focused on providing a personalized digital transformation experience. To provide the best service possible, we take on a very limited number of clients, ensuring that we are not overloaded and allowing us to focus on quickly delivering value and results."
+const description = "We are a boutique firm laser-focused on providing a personalized digital transformation experience. We take on a very limited number of clients, ensuring that we are not overloaded and allowing us to focus on quickly delivering value and results."
 
 const isFunc = (val: any) => {
     return typeof val === 'function'
@@ -39,9 +39,9 @@ const ExpertiseJSON = [
                     <div className='mb-3'>
                         Expert in implementing Microsoft Azure cloud solutions, including compute, networking, storage, data platforms, monitoring, identity management, and security.
                     </div>
-                    <div className='mb-3'>
+                    {/* <div className='mb-3'>
                         Real-world experience successfully delivering:
-                    </div>
+                    </div> */}
                 </div>
             )
         },
@@ -62,7 +62,10 @@ const ExpertiseJSON = [
                 point: "Database architecture & implementations"
             },
             {
-                point: "Elastic (ELK) stack deployments"
+                point: "Serverless functions for event-driven solutions"
+            },
+            {
+                point: "Monitoring & alerting"
             },
         ]
     },
@@ -73,11 +76,11 @@ const ExpertiseJSON = [
 
         pointers: [
             {
-                point: 'Specialized in Azure cloud with significant experience deploying solutions on other cloud platforms such as AWS, Heroku, Digital Ocean, and Firebase.',
+                point: 'Specialized in Azure Global and Azure Government cloud solutions and experienced deploying solutions on other cloud platforms such as AWS, Heroku, Digital Ocean, and Firebase.',
                 pointers: []
             },
             {
-                point: 'Design and build software for web, iOS, Android, iPad, desktop, and for backend services.',
+                point: 'Design and build cloud-native software for web, iOS, Android, iPad, desktop, and backend services.',
                 pointers: []
             },
             {

@@ -4,8 +4,8 @@ import Header from '../components/header'
 import Footer from '../components/Footer'
 import Content from '../components/AboutUs/content'
 
-const title = 'A boutique digital transformation firm'
-const description = 'Exclusively focused on building and launching digital transformation projects'
+const title = 'Boutique digital transformation firm'
+const description = 'Exclusively focused on building & launching digital transformation projects'
 
 
 

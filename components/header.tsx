@@ -39,7 +39,7 @@ const Header = () => {
                 <div className="space-x-6 max-w-screen-xl -ml-4 py-4">
                     <a href={ROUTES.home} className={`text-white hover:text-electricGreen ${isActive(ROUTES.home)}`}>Home</a>
                     <a href={ROUTES.services} className={`text-white hover:text-electricGreen ${isActive(ROUTES.services)}`}>What we do</a>
-                    <a href={ROUTES.aboutUs} className={`text-white hover:text-electricGreen ${isActive(ROUTES.aboutUs)}`}>About Us</a>
+                    <a href={ROUTES.aboutUs} className={`text-white hover:text-electricGreen ${isActive(ROUTES.aboutUs)}`}>About us</a>
                 </div>
             </div>
             <div className='absolute top-0 right-0'>
