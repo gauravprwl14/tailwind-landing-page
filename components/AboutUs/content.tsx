@@ -12,6 +12,10 @@ const ExpertiseJSON = [
     {
         title: 'Product Management',
         description: `A cross-functional team with exceptional communication skills that dominates each stage of the product development lifecycle.`,
+        img: {
+            src: 'img/about-us_product-management.svg',
+            className: 'md:w-[404px]'
+        },
         pointers: [
             {
                 point: 'UX and UI design for mobile and web applications',
@@ -33,17 +37,21 @@ const ExpertiseJSON = [
             return (
                 <div className=''>
                     <div className='mb-3'>
-                    Design and lead cloud solution implementations that solve strategic challenges and increase performance, reliability, availability, and scalability.
+                        We design and lead cloud solution implementations that solve a company’s strategic challenges and increase performance, reliability, availability, and scalability.
                     </div>
                     <div className='mb-3'>Enterprise-level solutions architect building mission-critical, high-availability, high-performance, high-scalability cloud solutions.</div>
                     <div className='mb-3'>
-                    Experts in implementing Microsoft Azure cloud solutions, including compute, networking, storage, data platforms, monitoring, identity management, and security.
+                        Expert in implementing Microsoft Azure cloud solutions, including compute, networking, storage, data platforms, monitoring, identity management, and security.
                     </div>
-                    {/* <div className='mb-3'>
+                    <div className='mb-3'>
                         Real-world experience successfully delivering:
-                    </div> */}
+                    </div>
                 </div>
             )
+        },
+        img: {
+            src: 'img/about_us_architecture_&_infrastructure.svg',
+            className: 'md:mt-16'
         },
         pointers: [
             {
@@ -59,54 +67,68 @@ const ExpertiseJSON = [
                 point: "Kubernetes deployments"
             },
             {
-                point: "Database architecture & implementations"
-            },
-            {
                 point: "Serverless functions for event-driven solutions"
             },
             {
-                point: "Monitoring & alerting"
+                point: "Database architecture & implementations"
+            },
+            {
+                point: "Elastic (ELK) stack deployments"
             },
         ]
     },
     {
         title: 'Software & Platforms',
-        description: "Experienced in a broad cross-section of languages, platforms and frameworks though always focused on implementing solutions that best solve given problems.",
-
-
+        description: "Experienced in a broad cross-section of languages, platforms and frameworks. Focused on implementing a solution that best solves a company’s unique challenges.",
+        img: {
+            src: 'img/about_us_software_&_platforms.svg',
+            className: ''
+        },
         pointers: [
             {
-                point: 'Specialized in Azure and Azure Government cloud solutions',
+                point: 'Specialized in Azure cloud with significant experience deploying solutions on other cloud platforms such as AWS, Heroku, Digital Ocean, and Firebase.',
                 pointers: []
             },
             {
-                point: 'Design and build cloud-native software for web, iOS, Android, iPad, desktop, and backend services.',
+                point: 'Design and build software for web, iOS, Android, iPad, desktop, and for backend services.',
                 pointers: []
             },
             {
-                point: 'Senior database architects implementing solutions using PostgreSQL, Redis, MongoDB, MySQL, SQLite, and Firestore.',
+                point: 'Senior database architect implementing solutions using PostgreSQL, Redis, MongoDB, MySQL, SQLite, and Firestore.',
                 pointers: []
             },
             {
-                point: 'Python, Pandas, Django, NodeJS, React, NextJS, Flutter, Dart, PHP, Go, Beego, JavaScript, Typescript, HTML, CSS, Tailwind, Bootstrap.',
+                point: 'Experience leading projects using Python, Pandas, Django, NodeJS, React, NextJS, Flutter, Dart, PHP, Go, Beego, JavaScript, Typescript, HTML, CSS, Tailwind, Bootstrap.',
                 pointers: []
             }
         ]
     },
     {
         title: 'Processes & Systems',
-        description: `Experts in every stage of the product development lifecycle including UX and UI design, user story mapping and release planning, sprint planning and delivery, and sprint review and retrospectives.`,
+        description: `Systems-based approach that quickly, efficiently, and reliably delivers beautiful, high-quality solutions.`,
+        img: {
+            src: 'img/about_us_processes_&_systems.svg',
+            className: 'flex content-center'
+        },
         pointers: [
             {
-                point: 'Agile best practices and MVP mindset providing continuously-improving processes that efficiently deliver high-quality solutions while maintaining team health.',
+                point: 'Use Agile best practices and MVP concepts to lead every stage of the product development lifecycle including UX and UI design, user story mapping and release planning, sprint planning and execution, and sprint review and retrospectives.',
                 pointers: []
             },
             {
-                point: 'Test driven development and automated testing for both software and infrastructure.',
+                point: 'Data-driven engineering using DORA/SPACE metrics to continuously improve engineering processes, ensuring fast, efficient, and quality delivery of features while improving team health.',
                 pointers: []
             },
             {
-                point: 'Continuous integration/continuous deployment, and feature flag progressive delivery pipelines.',
+                point: 'Adherent to test driven development and automated testing for software and infrastructure.',
+                pointers: []
+            },
+            {
+                point: 'Dev Ops engineer with experience implementing continuous integration and continuous deployment processes using Azure pipelines, Heroku pipelines, Codeship, and CircleCI.',
+                pointers: []
+            },
+            {
+                point: 'Progressive delivery systems using feature flags and LaunchDarkly',
                 pointers: []
             },
         ]
@@ -190,9 +212,14 @@ const Content = () => {
                         const alignLeft = index % 2 === 0
 
                         return (
-                            <div className={`flex md:mb-16 mb-2 ${alignLeft ? 'justify-start' : 'justify-end'}`}>
-                                <div className='md:w-1/2 w-full'>
+                            <div className={`flex md:mb-16 mb-2 ${alignLeft ? 'flex-row' : 'flex-row-reverse'}`}>
+                                <div className={`md:w-1/2 w-full`}>
                                     <ExpertiseSection obj={obj} key={index} />
+                                </div>
+                                <div className='md:w-1/2 w-full flex justify-center'>
+                                    <div className={`${obj.img.className}`}>
+                                        <img className='w-full' src={obj.img.src} />
+                                    </div>
                                 </div>
                             </div>
                         )

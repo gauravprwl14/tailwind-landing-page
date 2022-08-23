@@ -5,6 +5,8 @@ import { ROUTES } from '../utility/routes'
 import { __DEV__, trimExtension } from '../utility/helper'
 import { handleGetInTouch } from '../utility/helper'
 
+console.log('%c ROUTES ', 'background: lime; color: black', { ROUTES, __DEV__ });
+
 
 type HeaderType = {
     title: string;
@@ -20,6 +22,7 @@ const Header = () => {
     const router = useRouter();
     const isActive = (path: string) => {
         console.log('%c router.pathname ', 'background: lime; color: black', { route: router.pathname, path: trimExtension(path) });
+        console.log('%c ROUTES ', 'background: lime; color: black', { ROUTES, __DEV__ });
         if (router.pathname === trimExtension(path)) {
             return 'text-electricGreen'
         }
